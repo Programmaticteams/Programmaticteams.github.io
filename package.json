@@ -1,5 +1,5 @@
 {
-  "name": "programmatic-vue-website",
+  "name": "programmatic-website",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -8,11 +8,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
-    "@vitejs/plugin-vue-jsx": "^3.0.1",
     "vite": "^4.4.6"
   }
 }
