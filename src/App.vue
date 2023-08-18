@@ -6,7 +6,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <header>
 
-    <nav class="navbar--main">
+    <nav class="navbar--main max">
       <ul class="navbar--item">
         <li>
           <RouterLink to="/">Home</RouterLink>
