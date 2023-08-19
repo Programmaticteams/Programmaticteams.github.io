@@ -1,12 +1,10 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-
+import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <header>
-
-    <nav class="navbar--main max">
+  <header class="fixed top-0">
+    <nav class="navbar--main text-yellow-400">
       <ul class="navbar--item">
         <li>
           <RouterLink to="/">Home</RouterLink>
@@ -16,8 +14,8 @@ import { RouterLink, RouterView } from 'vue-router'
         </li>
       </ul>
     </nav>
-
-  </header> 
+  </header>
 
   <RouterView />
 </template>
+<style src="./style.css"></style>
