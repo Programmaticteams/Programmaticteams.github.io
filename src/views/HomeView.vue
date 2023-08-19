@@ -45,7 +45,7 @@
     <section class="flex gap-56">
       <section class="flex-col h-1">
         <img
-          class="img-style"
+          class="img-style border rounded-sm border-black"
           src="https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
           alt="a picture of a person coding"
         />
@@ -72,7 +72,7 @@
       </section>
       <section class="flex flex-col justify-center">
         <img
-          class="img-style"
+          class="img-style border rounded-sm border-black"
           src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
           alt="a picture of a person teaching someone"
         />
@@ -101,12 +101,12 @@
     <h4 class="text-center text-5xl font-extrabold text-white mt-24 mb-3">
       Contact us
     </h4>
-    <p class="text-center text-2xl text-white my-5">
+    <p class="text-center text-2xl text-white m-5">
       Got questions? Reach out to us! We're here to answer your inquiries,
       provide more information about our programming classes and volunteering
       opportunities, and guide you through the exciting journey ahead.
     </p>
-    <h5 class="text-2xl text-center text-white my-5 font-thin">
+    <h5 class="text-2xl text-center text-white font-thin">
       programmaticteams@gmail.com
     </h5>
   </footer>
