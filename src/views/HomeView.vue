@@ -97,7 +97,19 @@
       </section>
     </section>
   </article>
-  <footer></footer>
+  <footer class="flex flex-col justify-center my-28">
+    <h4 class="text-center text-5xl font-extrabold text-white mt-24 mb-3">
+      Contact us
+    </h4>
+    <p class="text-center text-2xl text-white my-5">
+      Got questions? Reach out to us! We're here to answer your inquiries,
+      provide more information about our programming classes and volunteering
+      opportunities, and guide you through the exciting journey ahead.
+    </p>
+    <h5 class="text-2xl text-center text-white my-5 font-thin">
+      programmaticteams@gmail.com
+    </h5>
+  </footer>
 </template>
 
 <style scoped>
