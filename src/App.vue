@@ -4,9 +4,9 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
   <nav
-    class="navbar--main text-white justify-between shadow-md text-xl font-extrabold subpixel-antialiased flex fixed py-4 top-0 w-full px-20 bg-gradient-to-t from-black to-transparent"
+    class="navbar--main text-white justify-between shadow-md text-xl font-extrabold subpixel-antialiased flex py-4 top-0 w-full px-20 bg-gray-900"
   >
-    <div class="flex gap-2 items-center">
+    <div class="flex items-center">
       <RouterLink to="/" tag="img">
         <img class="w-10" src="./assets/logo.png" />
       </RouterLink>
@@ -32,6 +32,13 @@ import { RouterLink, RouterView } from "vue-router";
       </li>
       <li>
         <RouterLink to="/articles">Articles</RouterLink>
+      </li>
+      <div class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"></div>
+      <li>
+        <a href="https://discord.gg/PGUc95ZRYk"> <img class="w-8" src="./assets/discord.png"></a>
+      </li>
+      <li>
+        <a href="temp"> <img class="w-9" src="./assets/instagram.png"></a>
       </li>
     </ul>
   </nav>
