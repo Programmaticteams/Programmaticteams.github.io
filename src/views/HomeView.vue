@@ -6,8 +6,8 @@
     <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 mb-3 font-extrabold text-7xl">Become a developer</h3>
     <h1 class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-blue-500 mb-3 font-extrabold text-8xl pb-2">Programmatics</h1>
     <RouterLink to="/about"><button class="bg-gray-600 hover:bg-gray-500 active:bg-gray-600 p-3 rounded shadow-md font-bold text-green-300 m-8" role="link"> Why Us?</button></RouterLink>
-    <RouterLink to="/about"><button class="bg-gray-600 hover:bg-gray-500 active:bg-gray-600 p-3 rounded shadow-md font-bold text-blue-300 m-8" role="link"> Get Started -> </button></RouterLink>
-    <RouterLink to="/about"><button class="bg-gray-600 hover:bg-gray-500 active:bg-gray-600 p-3 rounded shadow-md font-bold text-green-300 m-8" role="link"> Volunteer</button></RouterLink>
+    <RouterLink to="/enroll"><button class="bg-gray-600 hover:bg-gray-500 active:bg-gray-600 p-3 rounded shadow-md font-bold text-blue-300 m-8" role="link"> Get Started -> </button></RouterLink>
+    <RouterLink to="/volunteer"><button class="bg-gray-600 hover:bg-gray-500 active:bg-gray-600 p-3 rounded shadow-md font-bold text-green-300 m-8" role="link"> Volunteer</button></RouterLink>
   </main>
   
   <article></article>
