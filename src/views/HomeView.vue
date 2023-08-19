@@ -1,14 +1,11 @@
 <script setup></script>
 
 <template>
-  <main>
-    <!-- <img
-      alt="Programmatic Logo"
-      class="logo"
-      src="@/assets/logo.png"
-      width="250"
-      height="250"
-    />
-    <h1>Welcome to Programmatic</h1> -->
+  <main class="irl flex-col justify-center text-center">
+    <h3 class="text-white mb-2 font-bold text-2xl">Become a developer</h3>
+    <h1 class="text-6xl text-white font-bold mb-16">Programmatics</h1>
+    <button></button>
   </main>
+  <article></article>
+  <footer></footer>
 </template>

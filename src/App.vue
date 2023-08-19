@@ -4,9 +4,9 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
   <nav
-    class="navbar--main text-white-500 justify-between shadow-sm text-2xl font-extrabold subpixel-antialiased flex fixed py-5 top-0 w-full px-20 bg-gradient-to-r transition duration-900"
+    class="navbar--main text-white justify-between shadow-md text-2xl font-extrabold subpixel-antialiased flex fixed py-5 top-0 w-full px-20 bg-gradient-to-r transition duration-900"
   >
-    <div class="flex gap-5">
+    <div class="flex gap-2">
       <RouterLink to="/" tag="img">
         <img class="w-10" src="./assets/logo.png" />
       </RouterLink>
@@ -14,7 +14,7 @@ import { RouterLink, RouterView } from "vue-router";
       <RouterLink to="/">Programmatics</RouterLink>
     </div>
 
-    <ul class="flex gap-5">
+    <ul class="flex gap-7">
       <li>
         <RouterLink to="/">Home</RouterLink>
       </li>
