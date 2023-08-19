@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <main class="bg--home irl flex-col justify-center text-center">
+  <main class="bg--home irl flex-col justify-center text-center shadow-lg">
     <h3
       class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 mb-3 font-extrabold text-7xl"
     >
@@ -41,7 +41,7 @@
     <h2 class="text-5xl font-extrabold text-center text-white mt-24 mb-3">
       what we offer
     </h2>
-    <hr class="mx-auto w-1/4 mb-10 border border-purple-700" />
+    <hr class="mx-auto w-1/4 mb-12 border border-purple-700" />
     <section class="flex gap-56">
       <section class="flex-col h-1">
         <img
