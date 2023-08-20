@@ -1,6 +1,5 @@
 @import "./base.css";
 
-
 @media (min-width: 1024px) {
   body {
     display: flex;
@@ -20,7 +19,7 @@
   max-width: 100vw;
   width: 99vw;
   padding-top: 300px;
-  padding-bottom: 300px;;
+  padding-bottom: 300px;
 }
 
 .card {
@@ -41,19 +40,19 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #0c0c0c; 
+  background: #0c0c0c;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #747474; 
-  border-radius: 10px; 
+  background: #747474;
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #131313; 
-} 
+  background: #131313;
+}
 
 /* .button {
   background-color: #ffffff00;
@@ -75,5 +74,9 @@
 
 .ourTeam-desc {
   width: 370px;
-  max-width: 370px; 
+  max-width: 370px;
+}
+.cont-us {
+  width: 1200px;
+  max-width: 1200px;
 }

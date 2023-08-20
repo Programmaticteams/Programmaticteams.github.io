@@ -43,7 +43,7 @@
     </h2>
     <hr class="mx-auto w-1/4 mb-12 border border-purple-700" />
     <section class="flex gap-56">
-      <section class="h-1 flex flex-col items-center" >
+      <section class="h-1 flex flex-col items-center">
         <img
           class="img-style border rounded-sm border-black"
           src="https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
@@ -57,9 +57,10 @@
           classes at Programmatic. Dive into game development using Unity and
           master Python from beginner to advanced levels. Or, embark on tech
           adventures with Raspberry Pi and Python. Our instructors have hands-on
-          experience and will guide you through projects to create a collaborative learning space for all skill levels.
-          Join us now to fuel your passion for programming and open the door to
-          endless opportunities.
+          experience and will guide you through projects to create a
+          collaborative learning space for all skill levels. Join us now to fuel
+          your passion for programming and open the door to endless
+          opportunities.
         </p>
         <RouterLink to="/enroll"
           ><button
@@ -79,7 +80,7 @@
         <h4 class="text-3xl text-center text-white font-bold my-5">
           Volunteer oppotunity
         </h4>
-        <p class="content-center text-center size text-yellow-50">
+        <p class="content-center text-center size text-yellow-50 mb-16">
           Ready to make a meaningful impact while honing your skills? Our
           volunteering opportunities at Programmatics offer a chance to give
           back to the community and grow as an individual. Whether you're a
@@ -101,7 +102,7 @@
     <h4 class="text-center text-5xl font-extrabold text-white mt-24 mb-3">
       Contact us
     </h4>
-    <p class="text-center text-2xl text-white m-5">
+    <p class="text-center text-2xl text-white m-5 cont-us">
       Got questions? Reach out to us! We're here to answer your inquiries,
       provide more information about our programming classes and volunteering
       opportunities, and guide you through the exciting journey ahead.
