@@ -80,3 +80,16 @@
   width: 1200px;
   max-width: 1200px;
 }
+
+.w-custom {
+  width: 560px;
+  height: 274px;
+}
+
+.txt-custom {
+  width: 560px;
+  max-width: 560px;
+}
+
+.grid-custom {
+}
