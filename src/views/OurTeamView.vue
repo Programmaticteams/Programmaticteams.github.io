@@ -23,7 +23,7 @@ import BioCard from "../components/BioCard.vue";
       <BioCard
         name="Ofir"
         pos="Founder"
-        desc=" Hi, I'm Ofir and im the founder of Programmatics. I have over 5 years of coding experience in Python and recently started working with Unity and dart."
+        desc=" Hi, I'm Ofir and im the founder of Programmatics. I have over 5 years of coding experience in Python and recently started working with Unity and Dart."
         langs="Python, Dart, C#"
         discord="@.ofish"
         imgurl="discord.png"
