@@ -3,6 +3,7 @@ const props = defineProps({
   name: String,
   desc: String,
   langs: String,
+  thecs: String,
   discord: String,
   imgurl: String
 })
@@ -15,16 +16,16 @@ function getImageUrl() {
 
  
 <template>
-  <div class="card border-4 border-red-500 flex justify-center">
-    <div class="content border-4 border-blue-500 flex ">
-      <img class="border-4 border-green-500 w-20 h-20 " :src="getImageUrl()" alt="a picture of a Programmatic member">
-      <section>
-        <h2 class="border-4 border-yellow-500">{{ name }}</h2>
-        <p class="border-4 border-yellow-500">{{ desc }}</p>
-        <p class="border-4 border-yellow-500">{{ thecs }}</p>
-        <p class="border-4 border-yellow-500">{{ langs }}</p>
-        <p class="border-4 border-yellow-500">{{ discord }}</p>
-        <button class="button flex justify-center py-3 items-center">
+  <div class="card flex border rounded border-black bg-gray-950 justify-center">
+    <div class="content flex gap-4 justify-center">
+      <img class="w-20 h-20 p-3" :src="getImageUrl()" alt="a picture of a Programmatic member"> 
+      <section class="flex flex-col gap-2 justify-center">
+        <h2 class="text-white font-bold">{{ name }}</h2>
+        <p class="text-white">{{ desc }}</p>
+        <p class="text-white">{{ thecs }}</p> 
+        <p class="text-white">{{ langs }}</p>
+        <p class="text-white">{{ discord }}</p>
+        <button class="bg-gray-600 hover:bg-gray-500 active:bg-gray-600 duration-700 p-3 rounded shadow-md font-bold text-blue-300 mr-8 mt-8">
           <div class="flex justify-center items-center">
             <p>Learn more</p> 
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"

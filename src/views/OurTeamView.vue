@@ -3,31 +3,34 @@ import BioCard from "../components/BioCard.vue"
 </script>
 
 <template>
-  <main class="flex gap-80 top-44"> 
+  <main class="flex gap-x-80 top-44"> 
 
-    <section class="fixed justify-left ml-5"> 
-      <h1 class="font-extrabold text-gray-200 text-6xl mt-32">Our Team</h1>
-      <h3 class="text-lg font-bold py-10 ourTeam-desc">The constant development of Programmatic is led by a team of
-        individuals, devoted to enhancing the Programmatic learning
-        experience to the maximum extent possible. Meet our founders and developers: </h3> 
+    <section class="fixed"> 
+      <h1 class="font-extrabold text-gray-200 text-6xl mt-32">Our Team: </h1>
+      <h3 class="text-lg font-bold py-10 ourTeam-desc">This is the team of founders, developers, and teachers behind Programmatic:
+         Our diverse and dynamic team is the driving force behind the continued development and improvment of Programmatic.
+        With a perfect blend of visionary founders, 
+        brilliant developers, and creative minds, our team has a passion for providing excellent teaching material and classes for our students. 
+        We're united by our shared commitment 
+        to improving Programmatic and creating impactful experiences for our students. Meet the team: </h3> 
     </section>
-    <hr class="px-10"> 
+    <hr class="px-20"> 
     <div class="border border-gray-600"></div> 
-    <section class="flex flex-col gap-20 mt-36"> 
+    <section class="flex flex-col gap-20 mt-36 mb-10"> 
       <BioCard name="Ofir"
         desc="1000 year old developer invented c++ hacked nsa with a potato invented the internet more important than allen turing bricked your mom's windows 98"
-        langs="Python" discord="@yourmom" imgurl="discord.png" />
+        langs="Python" discord="@yourmom" thecs="hacking and kali linux" imgurl="discord.png" />
       <BioCard name="Zain"
         desc="1000 year old developer invented c++ hacked nsa with a potato invented the internet more important than allen turing bricked your mom's windows 98"
-        langs="Python" discord="@yourmom" imgurl="discord.png" />
+        langs="Python" discord="@yourmom" thecs="hacking and kali linux" imgurl="discord.png" />
 
       <BioCard name="Adam"
         desc="1000 year old developer invented c++ hacked nsa with a potato invented the internet more important than allen turing bricked your mom's windows 98"
-        langs="Python" discord="@yourmom" imgurl="discord.png" />
+        langs="Python" discord="@yourmom" thecs="hacking and kali linux" imgurl="discord.png" />
 
       <BioCard name="Et"
         desc="1000 year old developer invented c++ hacked nsa with a potato invented the internet more important than allen turing bricked your mom's windows 98"
-        langs="Python" discord="@yourmom" imgurl="discord.png" />
+        langs="Python" discord="@yourmom" thecs="hacking and kali linux" imgurl="discord.png" />
     </section>
   </main>
 </template>
