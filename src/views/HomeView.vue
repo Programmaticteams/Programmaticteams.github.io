@@ -27,14 +27,6 @@
         Get Started &rarr;
       </button></RouterLink
     >
-    <!-- <RouterLink to="/volunteer"
-      ><button
-        class="bg-gray-600 hover:bg-gray-500 active:bg-gray-600 p-3 rounded shadow-md font-bold text-green-300 m-8"
-        role="link"
-      >
-        Volunteer
-      </button></RouterLink
-    > -->
   </main>
   <article class="flex-col flex justify-center items-center">
     <h2 class="text-5xl font-extrabold text-center text-white mt-24 mb-3">
