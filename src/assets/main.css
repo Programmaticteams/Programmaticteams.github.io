@@ -23,9 +23,57 @@
   padding-bottom: 300px;;
 }
 
+.card {
+  width: 650px;
+  height: 366px;
+}
+
 .img-style,
 .size {
   width: 465px;
   margin: 0;
   /* center the pic */
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0c0c0c; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #747474; 
+  border-radius: 10px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #131313; 
+} 
+
+.button {
+  background-color: #ffffff00;
+  color: #fff;
+  width: 10em;
+  border: #3654ff 0.2em solid;
+  border-radius: 11px;
+  transition: all 0.6s ease;
+}
+
+.button:hover {
+  background-color: #3654ff;
+  cursor: pointer;
+}
+
+.button svg {
+  transition: all 0.6s ease;
+}
+
+.ourTeam-desc {
+  width: 300px;
+  max-width: 300px;
 }
