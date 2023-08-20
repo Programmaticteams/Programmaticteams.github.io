@@ -1,12 +1,12 @@
 <template>
-  <main class="bg--about flex-col text-center shadow-lg">
+  <header class="bg--about flex-col text-center shadow-lg">
     <h2
       class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 mb-3 font-extrabold text-8xl pb-2"
     >
       Who we are?
     </h2>
-  </main>
-  <article>
+  </header>
+  <main>
     <section class="flex justify-center content-center gap-32">
       <div class="flex flex-col justify-center gap-4">
         <h3 class="txt-custom text-5xl font-bold text-white">Our mission</h3>
@@ -23,7 +23,7 @@
         <img class="w-about-img-custom" src="public/logo_short.png" alt="" />
       </div>
     </section>
-  </article>
+  </main>
   <footer class="mt-52 flex gap-24 mb-10">
     <section class="flex flex-col w-about-extra-custom">
       <h4 class="txt-custom text-3xl font-bold text-white">Future goals</h4>
