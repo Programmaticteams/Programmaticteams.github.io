@@ -30,7 +30,7 @@ import BioCard from "../components/BioCard.vue";
       />
       <BioCard
         name="Zain"
-        desc="1000 year old developer invented c++ hacked nsa with a potato invented the internet more important than allen turing bricked your mom's windows 98"
+        desc="Hello, my name is Zain. I am looking forward to teaching you all about programming! Currently, I have 3 years of experience in both Python and Raspberry Pi."
         langs="Python"
         discord="@yourmom"
         pos="hacking and kali linux"
@@ -39,7 +39,7 @@ import BioCard from "../components/BioCard.vue";
 
       <BioCard
         name="Adam"
-        desc="1000 year old developer invented c++ hacked nsa with a potato invented the internet more important than allen turing bricked your mom's windows 98"
+        desc="Hello, I'm Adam. I have about 4 years of experience in Unity and making video games."
         langs="Python"
         discord="@yourmom"
         pos="hacking and kali linux"
@@ -47,7 +47,7 @@ import BioCard from "../components/BioCard.vue";
       />
 
       <BioCard
-        name="Et"
+        name="Ethan"
         desc="1000 year old developer invented c++ hacked nsa with a potato invented the internet more important than allen turing bricked your mom's windows 98"
         langs="Python"
         discord="@yourmom"
