@@ -1,6 +1,34 @@
 <script setup>
 import Zpattern1 from "../components/Zpattern-1.vue";
 import Zpattern2 from "../components/Zpattern-2.vue";
+// const open_btn = document.querySelector(".open-popup-btn");
+// const close_btn = document.querySelector(".close-btn");
+// const popup = document.querySelector(".popup");
+// const main_popup = document.querySelector(".main-popup");
+
+// open_btn.addEventListener("click", () => {
+//   popup.style.display = "flex";
+//   margin_popup.style.cssText =
+//     "animation:slide-in .5s ease; animation-fill-mode: forwards;";
+// });
+
+// close_btn.addEventListener("click", () => {
+//   margin_popup.style.cssText =
+//     "animation:slide-out .5s ease; animation-fill-mode: forwards;";
+//   setTimeout(() => {
+//     popup.style.display = "none";
+//   }, 500);
+// });
+
+// window.addEventListener("click", (e) => {
+//   if (e.target == document.querySelector(".popup-overlay")) {
+//     margin_popup.style.cssText =
+//       "animation:slide-out .5s ease; animation-fill-mode: forwards;";
+//     setTimeout(() => {
+//       popup.style.display = "none";
+//     }, 500);
+//   }
+// });
 </script>
 
 <template>
@@ -48,34 +76,34 @@ import Zpattern2 from "../components/Zpattern-2.vue";
   <main class="flex gap-x-80 top-44">
     <section class="flex flex-col gap-36">
       <Zpattern1
-        name="Programmatic"
+        name="lore"
         desc="Programmatic is a community of developers, designers, and content creators who are passionate about creating and learning."
         icon="python icon"
-        imgurl="src/assets/discord.png"
+        imgurl="discord.png"
       />
       <Zpattern2
         name="Programmatic"
         desc="Programmatic is a community of developers, designers, and content creators who are passionate about creating and learning."
         icon="python icon"
-        imgurl="src/assets/discord.png"
+        imgurl="discord.png"
       />
       <Zpattern1
         name="Programmatic"
         desc="Programmatic is a community of developers, designers, and content creators who are passionate about creating and learning."
         icon="python icon"
-        imgurl="src/assets/discord.png"
+        imgurl="discord.png"
       />
       <Zpattern2
         name="Programmatic"
         desc="Programmatic is a community of developers, designers, and content creators who are passionate about creating and learning."
         icon="python icon"
-        imgurl="src/assets/discord.png"
+        imgurl="discord.png"
       />
       <Zpattern1
         name="Programmatic"
         desc="Programmatic is a community of developers, designers, and content creators who are passionate about creating and learning."
         icon="python icon"
-        imgurl="src/assets/discord.png"
+        imgurl="discord.png"
       />
     </section>
   </main>
@@ -102,5 +130,28 @@ import Zpattern2 from "../components/Zpattern-2.vue";
 
 .main-popup {
   z-index: 1;
+  transform: translateX(100%);
+}
+
+.popup {
+  overflow: hidden;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 </style>
