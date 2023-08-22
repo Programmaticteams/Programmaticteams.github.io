@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
+
+window.onload = function(){
   const formbar = document.getElementById('formbar');
   const openPopupButton = document.getElementById('open-popup-btn');
   const overlay = document.getElementById('overlay');
   const closePopupButton = document.getElementById('close-popup-btn')
-  
   openPopupButton.addEventListener('click', () => {
     formbar.style.right = "0"; 
     overlay.style.display = "block";
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.remove('overflow-hidden-compensate', 'pointer-events-none', 'fixed', 'inset-0', 'pr-2.5')
     formbar.removeEventListener('click', closeformbar); 
   }
-
+}
 
   // const open_btn = document.querySelector(".open-popup-btn");
   // const close_btn = document.querySelector(".close-btn");
@@ -86,4 +86,3 @@ document.addEventListener("DOMContentLoaded", function () {
   //     }, 500);
   //   }
   // });
-});

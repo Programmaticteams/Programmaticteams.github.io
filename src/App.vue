@@ -17,22 +17,22 @@ import { RouterLink, RouterView } from "vue-router";
 
     <ul class="flex gap-7 items-center">
       <li>
-        <RouterLink to="/">Home</RouterLink>
+        <a href="/">Home</a>
       </li>
       <li>
-        <RouterLink to="/about">About</RouterLink>
+        <a href="/about">About</a>
       </li>
       <li>
-        <RouterLink to="/team">Our Team</RouterLink>
+        <a href="/team">Our Team</a>
       </li>
       <li>
-        <RouterLink to="/enroll">Enroll</RouterLink>
+        <a href="/enroll">Enroll</a>
       </li>
       <li>
-        <RouterLink to="/volunteer">Volunteer</RouterLink>
+        <a href="/volunteer">Volunteer</a>
       </li>
       <li>
-        <RouterLink to="/articles">Articles</RouterLink>
+        <a href="/articles">Articles</a>
       </li>
       <div class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"></div>
       <li>
