@@ -139,5 +139,6 @@
 .bg--home {
   background-image: url("https://images.unsplash.com/photo-1625535163131-9d1fc30ea5f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2664&q=80");
   background-repeat: no-repeat;
+  width: calc(100vw - (100vw - 100%));
 }
 </style>

@@ -144,7 +144,7 @@ import "../script.js"
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   max-width: 100vw;
-  width: 99vw;
+  width: calc(100vw - (100vw - 100%));
   padding-top: 230px;
   padding-bottom: 230px;
   margin-bottom: 100px;

@@ -40,18 +40,18 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #0c0c0c;
+  background: #564f4f;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #747474;
+  background: #bab7b7;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #131313;
+  background: #ffffff56;
 }
 
 /* .button {
