@@ -2,7 +2,6 @@
 const props = defineProps({
   name: String,
   desc: String,
-  icon: String,
   imgurl: String,
 });
 
@@ -17,7 +16,6 @@ function getImageUrl() {
       <img class="w-custom rounded" :src="getImageUrl()" alt="" />
     </div>
     <div>
-      <div>{{ icon }}</div>
       <h2 class="txt-custom text-xl font-bold text-white">
         {{ name }}
       </h2>

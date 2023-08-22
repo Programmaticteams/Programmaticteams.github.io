@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const openPopupButton = document.getElementById('open-popup-btn');
   const overlay = document.getElementById('overlay');
   const closePopupButton = document.getElementById('close-popup-btn')
+  
   openPopupButton.addEventListener('click', () => {
     formbar.style.right = "0"; 
     overlay.style.display = "block";

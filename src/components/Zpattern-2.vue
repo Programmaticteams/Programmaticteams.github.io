@@ -2,7 +2,6 @@
 const props = defineProps({
   name: String,
   desc: String,
-  icon: String,
   imgurl: String,
 });
 
@@ -14,7 +13,6 @@ function getImageUrl() {
 <template>
   <div class="flex justify-center gap-24">
     <div>
-      <div>{{ icon }}</div>
       <h2 class="txt-custom text-xl font-bold text-white">
         {{ name }}
       </h2>

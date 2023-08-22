@@ -11,9 +11,9 @@ import "../script.js"
       Start Learning today!
     </h2>
     <button id="open-popup-btn"
-      class="bg-gray-600 hover:bg-gray-500 active:bg-gray-600 p-3 rounded shadow-md font-bold text-blue-300 m-8 text-base open-popup-btn"
+      class="bg-gray-500 hover:bg-gray-600 active:bg-gray-600 p-5 rounded shadow-md font-extrabold text-blue-200 m-8 text-base open-popup-btn"
       role="link">
-      Enroll &rarr;
+      Enroll Now &rarr;
     </button>
   </header>
   <!--  -->
@@ -102,25 +102,34 @@ import "../script.js"
   <!--  -->
   <!--  -->
   <!--  -->
-  <main id="main" class="flex gap-x-80 top-44">
+  <main id="main" class="flex gap-x-80 top-44 mb-10">
     <section class="flex flex-col gap-36">
-      <Zpattern1 name="lore"
-        desc="Programmatic is a community of developers, designers, and content creators who are passionate about creating and learning."
-        icon="python icon" imgurl="discord.png" />
-      <Zpattern2 name="Programmatic"
-        desc="Programmatic is a community of developers, designers, and content creators who are passionate about creating and learning."
-        icon="python icon" imgurl="discord.png" />
-      <Zpattern1 name="Programmatic"
-        desc="Programmatic is a community of developers, designers, and content creators who are passionate about creating and learning."
-        icon="python icon" imgurl="discord.png" />
-      <Zpattern2 name="Programmatic"
-        desc="Programmatic is a community of developers, designers, and content creators who are passionate about creating and learning."
-        icon="python icon" imgurl="discord.png" />
-      <Zpattern1 name="Programmatic"
-        desc="Programmatic is a community of developers, designers, and content creators who are passionate about creating and learning."
-        icon="python icon" imgurl="discord.png" />
+      <Zpattern1 name="Scratch"
+        desc="This course is designed for beginners with no background at all in computer science. Scratch is a dynamic block code language developed by MIT, designed to teach kids how to code. While Scratch is a far cry from the typical text based programming languages
+        Scratch is excellent at teaching beginners how to think logically, introducing important concepts and letting students explore without the boilerplate of conventional languages."
+          imgurl="scratch.png" />
+      <Zpattern2 name="Python Basic"
+        desc="Similarly to our Scratch course, this course is designed for prospective students with little to no experience programming. This course jumps right into a text based programming language: Python. Python is a general purpose language 
+        developed by Guido van Rossum, and it is one of the easiest languages to learn. Despite its simpilicty, has been used in many important projects by expert developers (i.e. machine learning)."
+          imgurl="python.png" />
+      <Zpattern1 name="Python Advanced"
+        desc="A follow up to our Python Basic course, this course aims to focus on more advanced applications of Python. Rather than simply learning Python as a language, students will get to understand that languages are only tools. We'll dive
+         into advanced Python syntax (i.e. classes), data structures, algorithms, and real-world projects to become a proficient developer."
+         imgurl="python.png" />
+      <Zpattern2 name="Unity"
+        desc="Get started with practical computer science by signing up for our Unity class. In this class, we'll take a look at Unity, an amazing cross-platform game engine that is used by many professionals to create popular games like 
+        Call of Duty, Pokemon Go, and Beat Saber. In this class, you'll learn, yourself, how to use this tool to create amazing games and projects."
+         imgurl="unity.jpg" />
+      <Zpattern1 name="Pico & Raspberry Pi" desc="Embark on a journey into the world of Raspberry Pi and Pico. Along side software, learn to use electronics and hardware to create exciting projects with the Raspberry Pi and the new Raspberry Pi Pico microcontroller. This is about as practical as it gets:
+        using software along side hardware to create real-world projects." icon="raspberrypi icon"
+        imgurl="raspberrypi.png" />
+
     </section>
+
   </main>
+
+  <h1 class="mb-20 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-600 to-cyan-200 text-3xl text-center">Enroll Now, By Clicking The Enroll Button At
+    The Top Of The Page</h1>
   <div id="overlay" class="fixed inset-0 bg-black opacity-50 pointer-events-none z-49"></div>
 </template>
 
