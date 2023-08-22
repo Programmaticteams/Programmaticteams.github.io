@@ -21,13 +21,13 @@ function getImageUrl() {
         :src="getImageUrl()"
         alt="a picture of a Programmatic member"
       />
-      <section class="flex flex-col gap-2 justify-center">
+      <section class="flex flex-col gap-4 justify-center pr-3">
         <h2 class="text-white font-bold">{{ name }}</h2>
         <p class="text-white">{{ pos }}</p>
         <p class="text-white">{{ desc }}</p>
         <p class="text-white">{{ langs }}</p>
         <p class="text-white">{{ discord }}</p>
-        <button
+        <!-- <button
           class="bg-gray-800 hover:bg-gray-700 active:bg-gray-600 duration-700 p-3 rounded shadow-md text-blue-100 mr-8 mt-8"
         >
           <div class="flex justify-center items-center">
@@ -47,7 +47,7 @@ function getImageUrl() {
               ></path>
             </svg>
           </div>
-        </button>
+        </button> -->
       </section>
     </div>
   </div>

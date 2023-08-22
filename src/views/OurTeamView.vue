@@ -22,8 +22,8 @@ import BioCard from "../components/BioCard.vue";
     <section class="flex flex-col gap-20 mt-36 mb-10">
       <BioCard
         name="Ofir"
-        pos="Founder"
-        desc=" Hi, I'm Ofir and im the founder of Programmatics. I have over 5 years of coding experience in Python and recently started working with Unity and Dart."
+        pos="Founder, Front-End Developer, Teacher"
+        desc=" Hi, I'm Ofir and im the founder of Programmatics. I have over 5 years of coding experience in Python and recently started working with Unity and Dart, making many practical applications."
         langs="Python, Dart, C#"
         discord="@.ofish"
         imgurl="discord.png"
@@ -33,7 +33,7 @@ import BioCard from "../components/BioCard.vue";
         desc="Hello, my name is Zain. I am looking forward to teaching you all about programming! Currently, I have 3 years of experience in both Python and Raspberry Pi."
         langs="Python"
         discord="@yourmom"
-        pos="hacking and kali linux"
+        pos="Co-Founder, Treasurer, Teacher"
         imgurl="discord.png"
       />
 
@@ -42,16 +42,16 @@ import BioCard from "../components/BioCard.vue";
         desc="Hello, I'm Adam. I have about 4 years of experience in Unity and making video games."
         langs="Python"
         discord="@yourmom"
-        pos="hacking and kali linux"
+        pos="Co-Founder, Graphic Designer, Teacher"
         imgurl="discord.png"
       />
 
       <BioCard
         name="Ethan"
-        desc="1000 year old developer invented c++ hacked nsa with a potato invented the internet more important than allen turing bricked your mom's windows 98"
-        langs="Python"
+        desc="I have experience in many programming languages, and many important alogithms and datastructures. I also have experience creating applications, like Discord bots, backends, and more."
+        langs="Lisp/Scheme, Python, C++, Java, JavaScript"
         discord="@yourmom"
-        pos="hacking and kali linux"
+        pos="Co-Founder, Full-Stack Developer, Dev of the Programmatic Discord Bot"
         imgurl="discord.png"
       />
     </section>

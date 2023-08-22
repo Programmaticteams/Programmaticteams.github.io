@@ -3,7 +3,7 @@
     <h2
       class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 mb-3 font-extrabold text-8xl pb-2"
     >
-      Who we are?
+      Who We Are
     </h2>
   </header>
   <main>
@@ -31,15 +31,11 @@
       <p
         class="w-about-extra-custom txt-custom mt-2 mb-4 text-lg text-gray-300"
       >
-        In our pursuit of empowering learners worldwide, our future goals
-        encompass expanding our teaching into other languages, ensuring
-        accessibility to diverse communities, while also broadening the scope of
-        our curriculum to encompass a wider variety of programming languages. By
-        breaking language barriers and offering courses in multiple languages,
-        we aim to create a more inclusive learning environment, enabling
-        individuals from different linguistic backgrounds to benefit from our
-        expert instruction. Simultaneously, by incorporating a diverse range of
-        programming languages into our curriculum, we aspire to cater to the
+        In our pursuit of empowering prospective computer science students worldwide, our future goals
+        encompass expanding our organization, ensuring
+        accessibility, while also broadening the scope of
+        our curriculum to encompass a wider variety of programming concepts. By expanding, as well as incorporating a diverse range of
+        programming concepts into our curriculum, we aspire to cater to the
         varied interests and career aspirations of our students.
       </p>
     </section>
@@ -48,29 +44,28 @@
       <p
         class="w-about-extra-custom txt-custom mt-2 mb-4 text-lg text-gray-300"
       >
-        At the heart of our organization lies a profound mission: to nurture
+        At the heart of our organization lies a mission: to nurture
         digital literacy among students and empower them with essential skills
         to not only navigate but thrive in an era fundamentally defined by
-        computers. We are dedicated to fostering a generation of individuals who
+        computer science. We are dedicated to fostering a generation of individuals who
         can confidently embrace the digital landscape, unlocking countless
         opportunities for personal and professional growth.
       </p>
     </section>
     <section class="flex flex-col w-about-extra-custom">
       <h4 class="txt-custom text-3xl font-bold text-white">
-        Who Can Benefit from Our Programs?
+        Who Can Benefit?
       </h4>
       <p
         class="w-about-extra-custom txt-custom mt-2 mb-4 text-lg text-gray-300"
       >
         Our programs at Programmatics cater to anyone and are ideal for those
-        eager to immerse themselves in programming and Raspberry Pi technology.
+        eager to immerse themselves in programming.
         Parents who understand the significance of teaching their children with
         early technological and problem-solving skills will discover our
-        offerings to be a valuable investment in their child's growth. Whether
+        offerings to be a valuable investment. Whether
         your child is taking their first steps into coding or already has some
-        coding experience, our curriculum ensures they progress confidently,
-        emerging as adept creators in the digital domain.
+        coding experience, our curriculum ensures they progress confidently and skillfully.
       </p>
     </section>
   </footer>
@@ -118,14 +113,14 @@
 }
 
 .w-about-custom {
-  width: 500px;
+  width: 600px;
 }
 
 .w-about-img-custom {
-  width: 500px;
+  width: 300px;
 }
 
 .w-about-extra-custom {
-  width: 330px;
+  width: 400px;
 }
 </style>
