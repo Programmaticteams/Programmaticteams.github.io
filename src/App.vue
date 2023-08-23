@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
   <nav
-    class="navbar--main text-white justify-between fixed shadow-md text-xl font-extrabold subpixel-antialiased flex py-4 top-0 w-full px-20 bg-gray-900"
+    class="navbar--main text-white justify-between fixed shadow-md text-xl font-extrabold subpixel-antialiased flex py-4 top-0 w-full px-20 bg-gray-900 z-50"
   >
     <div class="flex items-center">
       <RouterLink to="/" tag="img">
@@ -16,21 +16,27 @@ import { RouterLink, RouterView } from "vue-router";
     </div>
 
     <ul class="flex gap-7 items-center">
+
       <li>
         <a href="/">Home</a>
       </li>
+      <div class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"></div>
       <li>
         <a href="/about">About</a>
       </li>
+      <div class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"></div>
       <li>
         <a href="/team">Our Team</a>
       </li>
+      <div class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"></div>
       <li>
         <a href="/enroll">Enroll</a>
       </li>
+      <div class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"></div>
       <li>
         <a href="/volunteer">Volunteer</a>
       </li>
+      <div class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"></div>
       <li>
         <a href="/articles">Articles</a>
       </li>
@@ -46,4 +52,6 @@ import { RouterLink, RouterView } from "vue-router";
 
   <RouterView />
 </template>
-<style src="./style.css"></style>
+<style>
+
+</style>
