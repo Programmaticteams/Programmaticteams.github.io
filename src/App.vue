@@ -45,7 +45,7 @@ import { RouterLink, RouterView } from "vue-router";
         <a href="https://discord.gg/PGUc95ZRYk"> <img class="w-8" src="./assets/discord.png"></a>
       </li>
       <li>
-        <a href="temp"> <img class="w-9" src="./assets/instagram.png"></a>
+        <a href="https://www.instagram.com/programmatics_official/"> <img class="w-9" src="./assets/instagram.png"></a>
       </li>
     </ul>
   </nav>
