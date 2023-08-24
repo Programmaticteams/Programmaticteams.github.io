@@ -7,15 +7,12 @@ import "../script.js";
 <template>
   <header id="header" class="bg--about flex-col text-center shadow-lg">
     <h2
-      class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 mb-3 font-extrabold text-8xl pb-2"
-    >
+      class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 mb-3 font-extrabold text-8xl pb-2">
       Start Learning today!
     </h2>
-    <button
-      id="open-popup-btn"
+    <button id="open-popup-btn"
       class="bg-gray-500 hover:bg-gray-600 active:bg-gray-600 p-5 rounded shadow-md font-extrabold text-blue-200 m-8 text-base open-popup-btn"
-      role="link"
-    >
+      role="link">
       Enroll Now &rarr;
     </button>
   </header>
@@ -25,105 +22,55 @@ import "../script.js";
   <!--  -->
 
   <aside id="formbar" class="bg-slate-700 shadow-lg">
-    <button
-      id="close-popup-btn"
-      class="right-5 absolute top-5 hover:text-gray-300 focus:outline-none p-1 bg-white text-gray-900 rounded-lg"
-    >
+    <button id="close-popup-btn"
+      class="right-5 absolute top-5 hover:text-gray-300 focus:outline-none p-1 bg-white text-gray-900 rounded-lg">
       Close
     </button>
     <div class="pt-16 px-6">
       <form id="inputForm" class="text-white">
         <div class="mb-6">
           <label for="name" class="block text-sm font-bold">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            class="w-full p-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 text-black"
-          />
+          <input type="text" id="name" name="name" required
+            class="w-full p-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 text-black" />
           <br />
           <br />
           <label for="email" class="block text-sm font-bold">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            class="w-full p-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 text-black"
-          />
+          <input type="email" id="email" name="email" required
+            class="w-full p-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 text-black" />
           <br />
           <br />
-          <label for="enrolled" class="block text-sm font-bold">Class:</label
-          ><br />
+          <label for="enrolled" class="block text-sm font-bold">Class:</label><br />
           <div class="ml-4 space-y-1">
             <label for="message1" class="flex items-center">
-              <input
-                type="radio"
-                id="message1"
-                name="message"
-                value="Pico"
-                required
-                class="mr-2"
-              />
+              <input type="radio" id="message1" name="message" value="Pico" required class="mr-2" />
               <span class="text-gray-100">Pico</span>
             </label>
 
             <label for="message2" class="flex items-center">
-              <input
-                type="radio"
-                id="message2"
-                name="message"
-                value="PyBasic"
-                required
-                class="mr-2"
-              />
+              <input type="radio" id="message2" name="message" value="PyBasic" required class="mr-2" />
               <span class="text-gray-100">Python Basic</span>
             </label>
 
             <label for="message3" class="flex items-center">
-              <input
-                type="radio"
-                id="message3"
-                name="message"
-                value="PyAdv"
-                required
-                class="mr-2"
-              />
+              <input type="radio" id="message3" name="message" value="PyAdv" required class="mr-2" />
               <span class="text-gray-100">Python Advanced</span>
             </label>
 
             <label for="message4" class="flex items-center">
-              <input
-                type="radio"
-                id="message4"
-                name="message"
-                value="Scratch"
-                required
-                class="mr-2"
-              />
+              <input type="radio" id="message4" name="message" value="Scratch" required class="mr-2" />
               <span class="text-gray-100">Scratch</span>
             </label>
 
             <label for="message5" class="flex items-center">
-              <input
-                type="radio"
-                id="message5"
-                name="message"
-                value="Unity"
-                required
-                class="mr-2"
-              />
+              <input type="radio" id="message5" name="message" value="Unity" required class="mr-2" />
               <span class="text-gray-100">Unity</span>
             </label>
           </div>
         </div>
 
         <div class="flex justify-end">
-          <button
-            type="submit"
-            class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300"
-          >
+          <button type="submit"
+            class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300">
             Submit
           </button>
         </div>
@@ -131,25 +78,7 @@ import "../script.js";
     </div>
   </aside>
 
-  <!-- <aside id=".main_popup" class="popup hidden w-full h-screen absolute justify-center">
-    <div  class="popup-overlay h-screen w-full absolute"></div>
-    <div  class="main-popup absolute right-0 h-screen w-1/2 bg-blue-400 py-8 px-5 leading-4 flex justify-center">
-      <div class="popup-content">
-        <span
-          class="close-btn absolute top-4 right-4 text-4x1 cursor-pointer border p-3 hover:bg-white hover:transform transition duration-500 ease-in-out text-black">&times;</span>
-        <h3>Lorem ipsum dolor sit.</h3>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod est
-          corporis assumenda neque, a quia explicabo aliquam, voluptatum quam
-          quaerat minima soluta laudantium ea? Atque dolor veniam libero itaque
-          assumenda doloribus. Aliquid?
-        </p>
-      </div>
-    </div>
-  </aside> -->
-  <!--  -->
-  <!--  -->
-  <!--  -->
+
   <!--  -->
   <main id="main" class="flex gap-x-80 top-44 mb-10">
     <!-- <section class="flex flex-col gap-36">
@@ -180,10 +109,7 @@ import "../script.js";
     class="mb-20 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-600 to-cyan-200 text-3xl text-center">
     Enroll Now, By Clicking The Enroll Button At
     The Top Of The Page</h1> -->
-  <div
-    id="overlay"
-    class="fixed inset-0 bg-black opacity-50 pointer-events-none z-49"
-  ></div>
+  <div id="overlay" class="fixed inset-0 bg-black opacity-50 pointer-events-none z-49"></div>
 </template>
 
 <style scoped>

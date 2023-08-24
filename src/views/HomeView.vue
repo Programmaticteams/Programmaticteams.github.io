@@ -126,7 +126,7 @@
       provide more information about our programming classes and volunteering
       opportunities, and guide you through the exciting journey ahead.
     </p>
-    <h5 class="text-2xl text-center text-white font-extrabold bg-slate-800 p-2">
+    <h5 class="text-2xl text-center text-white font-extrabold p-2">
       programmaticteams@gmail.com
     </h5>
   </footer>
@@ -146,14 +146,14 @@
 }
 
 .image-container img {
-  border: 10px solid transparent;
+  border: 10px transparent;
 
-  box-shadow: 0 0 40px rgba(128, 0, 128, 0.7);
+  box-shadow: 0 0 60px rgba(131, 1, 131, 0.7);
 
   transition: box-shadow 0.3s ease-in-out;
 }
 
 .image-container:hover img {
-  box-shadow: 0 0 60px rgb(100, 0, 128);
+  box-shadow: 0 0 80px rgb(100, 0, 128);
 }
 </style>
