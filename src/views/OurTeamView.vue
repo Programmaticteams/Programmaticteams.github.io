@@ -51,7 +51,7 @@ import BioCard from "../components/BioCard.vue";
         desc="I have experience in many programming languages, and many important alogithms and datastructures. I also have experience creating applications, like Discord bots, backends, and more."
         langs="Lisp/Scheme, Python, C++, Java, JavaScript"
         discord="@yourmom"
-        pos="Co-Founder, Full-Stack Developer, Dev of the Programmatic Discord Bot"
+        pos="Founder, Full-Stack Developer, Dev of the Programmatic Discord Bot"
         imgurl="discord.png"
       />
     </section>
