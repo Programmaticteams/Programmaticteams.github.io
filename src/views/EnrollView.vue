@@ -1,25 +1,162 @@
 <script setup>
-import Zpattern1 from "../components/Zpattern-1.vue";
-import Zpattern2 from "../components/Zpattern-2.vue";
-import "../script.js";
+window.onload = function () {
+  const formbar = document.getElementById('formbar');
+  const openPopupButton = document.getElementById('open-popup-btn');
+  const overlay = document.getElementById('overlay');
+  const closePopupButton = document.getElementById('close-popup-btn')
+  const errorBox = document.getElementById('errorBox');
+  const closeErrorBox = document.getElementById('closeErrorBox');
+  const successBox = document.getElementById('successBox');
+  const closeSuccessBox = document.getElementById('closeSuccessBox');
+
+  openPopupButton.addEventListener('click', () => {
+    formbar.style.right = "0";
+    overlay.style.display = "block";
+    setTimeout(() => {
+      overlay.style.opacity = "0.60";
+    }, 10);;
+
+    document.body.classList.add('overflow-hidden-compensate', 'pointer-events-none', 'fixed', 'inset-0', 'pr-2.5');
+
+
+  });
+  const form = document.getElementById('inputForm');
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const enrolled = document.querySelector('input[name="message"]:checked').value;
+    const response = await fetch('http://localhost:5050/form/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ name, email, enrolled })
+    });
+
+    if (response.status === 204) {
+      form.reset();
+      closeformbar();
+      successBox.classList.remove('hidden');
+      successBox.classList.add('flex')
+      closeSuccessBox.addEventListener('click', () => {
+        successBox.classList.add('hidden');
+        successBox.classList.remove('flex');
+      });
+
+    } else {
+
+
+      errorBox.classList.remove('hidden');
+      errorBox.classList.add('flex')
+      closeErrorBox.addEventListener('click', () => {
+        errorBox.classList.add('hidden');
+        errorBox.classList.remove('flex');
+      });
+    }
+  });
+
+
+  closePopupButton.addEventListener('click', () => {
+    closeformbar();
+  });
+
+  function closeformbar() {
+    formbar.style.right = "-400px";
+    overlay.style.opacity = "0";
+    setTimeout(() => {
+      overlay.style.display = "none";
+    }, 500);
+    document.body.classList.remove('overflow-hidden-compensate', 'pointer-events-none', 'fixed', 'inset-0', 'pr-2.5')
+    formbar.removeEventListener('click', closeformbar);
+  }
+  const wrapper = document.querySelector(".wrapper");
+  const carousel = document.querySelector(".carousel");
+  const firstCardWidth = carousel.querySelector(".cardEn").offsetWidth;
+  const arrowBtns = document.querySelectorAll(".wrapper i");
+  const carouselChildrens = [...carousel.children];
+  let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+  // Get the number of cards that can fit in the carousel at once
+  let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+  // Insert copies of the last few cards to beginning of carousel for infinite scrolling
+  carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+  });
+  // Insert copies of the first few cards to end of carousel for infinite scrolling
+  carouselChildrens.slice(0, cardPerView).forEach(card => {
+    carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+  });
+  // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+  carousel.classList.add("no-transition");
+  carousel.scrollLeft = carousel.offsetWidth;
+  carousel.classList.remove("no-transition");
+  // Add event listeners for the arrow buttons to scroll the carousel left and right
+  arrowBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+    });
+  });
+  const dragStart = (e) => {
+    isDragging = true;
+    carousel.classList.add("dragging");
+    // Records the initial cursor and scroll position of the carousel
+    startX = e.pageX;
+    startScrollLeft = carousel.scrollLeft;
+  }
+  const dragging = (e) => {
+    if (!isDragging) return; // if isDragging is false return from here
+    // Updates the scroll position of the carousel based on the cursor movement
+    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+  }
+  const dragStop = () => {
+    isDragging = false;
+    carousel.classList.remove("dragging");
+  }
+  const infiniteScroll = () => {
+    // If the carousel is at the beginning, scroll to the end
+    if (carousel.scrollLeft === 0) {
+      carousel.classList.add("no-transition");
+      carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+      carousel.classList.remove("no-transition");
+    }
+    // If the carousel is at the end, scroll to the beginning
+    else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+      carousel.classList.add("no-transition");
+      carousel.scrollLeft = carousel.offsetWidth;
+      carousel.classList.remove("no-transition");
+    }
+    // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+    clearTimeout(timeoutId);
+    if (!wrapper.matches(":hover")) autoPlay();
+  }
+  const autoPlay = () => {
+    if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+    // Autoplay the carousel after every 2500 ms
+    timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+  }
+  autoPlay();
+  carousel.addEventListener("mousedown", dragStart);
+  carousel.addEventListener("mousemove", dragging);
+  document.addEventListener("mouseup", dragStop);
+  carousel.addEventListener("scroll", infiniteScroll);
+  wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+  wrapper.addEventListener("mouseleave", autoPlay);
+}
 </script>
 
 <template>
-  <header id="header" class="bg--about flex-col text-center shadow-lg">
     <h2
-      class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 mb-3 font-extrabold text-8xl pb-2">
+      class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 mb-1 font-extrabold text-8xl pb-2 mt-24">
       Start Learning today!
     </h2>
     <button id="open-popup-btn"
-      class="bg-gray-500 hover:bg-gray-600 active:bg-gray-600 p-5 rounded shadow-md font-extrabold text-blue-200 m-8 text-base open-popup-btn"
+      class="bg-gray-500 hover:bg-gray-600 active:bg-gray-600 p-5 rounded shadow-md font-extrabold text-blue-200 m-5 text-base open-popup-btn"
       role="link">
       Enroll Now &rarr;
     </button>
-  </header>
-  <!--  -->
-  <!--  -->
-  <!--  -->
-  <!--  -->
+ 
 
   <aside id="formbar" class="bg-slate-700 shadow-lg">
     <button id="close-popup-btn"
@@ -74,35 +211,72 @@ import "../script.js";
             Submit
           </button>
         </div>
+
       </form>
+      <div id="errorBox" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10 gap-10">
+        <div class="bg-gray-700 p-20 m-10 rounded shadow flex-center justify-center text-center gap-10">
+          <p class="text-red-600 text-3xl font-extrabold">Failed to submit form</p>
+          <button id="closeErrorBox" class="mt-2 px-10 py-3 bg-red-600 text-red-100 rounded">Close</button>
+        </div>
+      </div>
+
+      <div id="successBox"
+        class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10 gap-10">
+        <div class="bg-green-500 p-20 m-10 px-32 rounded shadow flex-center justify-center text-center gap-10">
+          <p class="text-white text-3xl font-extrabold">Success!</p>
+          <button id="closeSuccessBox" class="mt-2 px-10 py-3 bg-gray-700 text-white rounded">Close</button>
+        </div>
+      </div>
     </div>
   </aside>
 
 
   <!--  -->
-  <main id="main" class="flex gap-x-80 top-44 mb-10">
-    <!-- <section class="flex flex-col gap-36">
-      <Zpattern1 name="Scratch"
-        desc="This course is designed for beginners with no background at all in computer science. Scratch is a dynamic block code language developed by MIT, designed to teach kids how to code. While Scratch is a far cry from the typical text based programming languages
-        Scratch is excellent at teaching beginners how to think logically, introducing important concepts and letting students explore without the boilerplate of conventional languages."
-        imgurl="scratch.png" />
-      <Zpattern2 name="Python Basic"
-        desc="Similarly to our Scratch course, this course is designed for prospective students with little to no experience programming. This course jumps right into a text based programming language: Python. Python is a general purpose language 
-        developed by Guido van Rossum, and it is one of the easiest languages to learn. Despite its simpilicty, has been used in many important projects by expert developers (i.e. machine learning)."
-        imgurl="python.png" />
-      <Zpattern1 name="Python Advanced"
-        desc="A follow up to our Python Basic course, this course aims to focus on more advanced applications of Python. Rather than simply learning Python as a language, students will get to understand that languages are only tools. We'll dive
-         into advanced Python syntax (i.e. classes), data structures, algorithms, and real-world projects to become a proficient developer."
-        imgurl="python.png" />
-      <Zpattern2 name="Unity"
-        desc="Get started with practical computer science by signing up for our Unity class. In this class, we'll take a look at Unity, an amazing cross-platform game engine that is used by many professionals to create popular games like 
-        Call of Duty, Pokemon Go, and Beat Saber. In this class, you'll learn, yourself, how to use this tool to create amazing games and projects."
-        imgurl="unity.jpg" />
-      <Zpattern1 name="Pico & Raspberry Pi" desc="Embark on a journey into the world of Raspberry Pi and Pico. Along side software, learn to use electronics and hardware to create exciting projects with the Raspberry Pi and the new Raspberry Pi Pico microcontroller. This is about as practical as it gets:
-        using software along side hardware to create real-world projects." icon="raspberrypi icon"
-        imgurl="raspberrypi.png" />
-
-    </section> -->
+  <main id="main" class="flex px-6 mb-10">
+    <section>
+      <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel">
+          <li class="cardEn">
+            <div class="img"><img src="../assets/scratch.png" alt="img" draggable="false"></div>
+            <h2 class="text-black font-extrabold">Scratch</h2>
+            <h3 class="text-white font-bold pb-5">Beginner</h3>
+            <p class = "px-5 text-center text-white">Scratch is a dynamic block code language developed by MIT, designed to teach kids how to code. Scratch 
+        Scratch is excellent at teaching beginners how to think logically, introducing important concepts and letting students explore without the addition of boilerplatey syntax.</p>
+          </li>
+          <li class="cardEn">
+            <div class="img"><img src="../assets/python.png" alt="img" draggable="false"></div>
+            <h2 class="text-black font-extrabold">Python Basic</h2>
+            <h3 class="text-white font-bold pb-5">Beginner-Intermediate</h3>
+            <p class = "px-5 text-center text-white">This course jumps right into a text based programming language: Python. Python is a general purpose language 
+        developed by Guido van Rossum, and it is one of the easiest languages to learn. Despite its simpilicty, has been used in many important applications (i.e. machine learning).</p>
+          </li>
+          <li class="cardEn">
+            <div class="img"><img src="../assets/python.png" alt="img" draggable="false"></div>
+            <h2 h2 class="text-black font-extrabold">Python Advanced</h2>
+            <h3 class="text-white font-bold pb-5">Intermediate</h3>
+            <p class = "px-5 text-center text-white">This course aims to focus on more advanced applications of Python. Rather than simply learning Python as a language, students will get to understand that languages are only tools. We'll dive
+         into advanced language concepts (i.e. classes), data structures, algorithms, and real-world projects.</p>
+          </li>
+          <li class="cardEn">
+            <div class="img"><img src="../assets/unity.jpg" alt="img" draggable="false"></div>
+            <h2 class="text-black font-extrabold">Unity</h2>
+            <h3 class="text-white font-bold pb-5">Intermediate-Advanced</h3>
+            <p class = "px-5 text-center text-white">In this class, we'll take a look at Unity, an amazing cross-platform game engine that is used by many professionals to create popular games like 
+        Call of Duty, Pokemon Go, Beat Saber, and more! In this class, you'll learn, yourself, how to use this tool to create amazing games and projects.</p>
+          </li>
+          <li class="cardEn">
+            <div class="img"><img src="../assets/raspberrypi.png" alt="img" draggable="false"></div>
+            <h2 class="text-black font-extrabold">Raspberry Pi</h2>
+            <h3 class="text-white font-bold pb-5">Advanced</h3> 
+            <p class = "px-5 text-center text-white"> Learn to use hardware alongside software to create exciting projects with the Raspberry Pi and the new Raspberry Pi Pico microcontroller. In this class
+              you'll learn how software can interact with a real world enviorment
+            </p>
+          </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+    </section>
   </main>
 
   <!-- <h1
@@ -170,6 +344,128 @@ import "../script.js";
 
   100% {
     transform: translateX(100%);
+  }
+}
+
+
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+  left: -22px;
+}
+
+.wrapper i:last-child {
+  right: -22px;
+}
+
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .cardEn {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel :where(.cardEn, .img) {
+  display: flex;
+  /* justify-content: center; */
+  padding-top: 1rem;
+  align-items: center;
+}
+
+.carousel .cardEn {
+  scroll-snap-align: start;
+  height: 450px;
+  list-style: none;
+  background: rgb(95, 122, 122);
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.carousel .cardEn .img {
+  background: #1dad5077;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+}
+
+.cardEn .img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+
+.carousel .cardEn h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+}
+
+.carousel .cardEn span {
+  color: #6A6D78;
+  font-size: 1.31rem;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
   }
 }
 </style>
