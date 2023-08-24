@@ -33,7 +33,7 @@ import BioCard from "../components/BioCard.vue";
         desc="Hello, my name is Zain. I am looking forward to teaching you all about programming! Currently, I have 3 years of experience in both Python and Raspberry Pi."
         langs="Python, Raspberry Pi"
         discord="@zaindaman"
-        pos="Co-Founder, Treasurer, Teacher, Web Dev"
+        pos="Founder, Treasurer, Teacher, Web Dev"
         imgurl="zain.jpg"
       />
 
@@ -42,7 +42,7 @@ import BioCard from "../components/BioCard.vue";
         desc="Hello, I'm Adam. I have about 4 years of experience in Unity and making video games."
         langs="Python"
         discord="@yourmom"
-        pos="Co-Founder, Graphic Designer, Teacher"
+        pos="Founder, Graphic Designer, Teacher"
         imgurl="discord.png"
       />
 
