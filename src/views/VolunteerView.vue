@@ -69,11 +69,12 @@ import "../script.js"
               <span class="text-gray-100">Unity</span>
             </label>
             <label for="classOther" class="flex items-center">
-    <input type="radio" id="classOther" name="class[]" value="Other" class="mr-2">
+    <input type="checkbox" id="classOther" name="class[]" value="Other" class="mr-2">
     <span class="text-gray-100">Other:</span>
   </label>
-  <input type="text" id="otherClass" name="other_class" class="w-full p-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 text-black" placeholder="Enter another skill?">
+  <input type="text" id="otherClass" name="other_class" class="w-full p-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 text-black" placeholder="Enter other class" style="display: none;">
           </div>
+          
         </div>
 
         <div class="flex justify-end">
@@ -87,26 +88,6 @@ import "../script.js"
 
 
 
-  <!-- <aside id=".main_popup" class="popup hidden w-full h-screen absolute justify-center">
-    <div  class="popup-overlay h-screen w-full absolute"></div>
-    <div  class="main-popup absolute right-0 h-screen w-1/2 bg-blue-400 py-8 px-5 leading-4 flex justify-center">
-      <div class="popup-content">
-        <span
-          class="close-btn absolute top-4 right-4 text-4x1 cursor-pointer border p-3 hover:bg-white hover:transform transition duration-500 ease-in-out text-black">&times;</span>
-        <h3>Lorem ipsum dolor sit.</h3>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod est
-          corporis assumenda neque, a quia explicabo aliquam, voluptatum quam
-          quaerat minima soluta laudantium ea? Atque dolor veniam libero itaque
-          assumenda doloribus. Aliquid?
-        </p>
-      </div>
-    </div>
-  </aside> -->
-  <!--  -->
-  <!--  -->
-  <!--  -->
-  <!--  -->
   <main id="main" class="flex gap-x-80 top-44 mb-10">
     <section class="flex flex-col gap-36">
       <Zpattern1 name="What Do We Expect In A Volunteer?"

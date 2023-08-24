@@ -55,7 +55,20 @@ window.onload = function(){
     formbar.removeEventListener('click', closeformbar); 
   }
 }
+document.addEventListener('DOMContentLoaded', function () {
+  const classOtherCheckbox = document.getElementById('classOther');
+  const otherClassInput = document.getElementById('otherClass');
 
+  classOtherCheckbox.addEventListener('change', function () {
+    if (this.checked) {
+      otherClassInput.style.display = 'block';
+      otherClassInput.setAttribute('required', 'true');
+    } else {
+      otherClassInput.style.display = 'none';
+      otherClassInput.removeAttribute('required');
+    }
+  });
+});
   // const open_btn = document.querySelector(".open-popup-btn");
   // const close_btn = document.querySelector(".close-btn");
   // const popup = document.querySelector(".popup");
