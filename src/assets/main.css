@@ -1,5 +1,9 @@
 @import "./base.css";
 
+body {
+  background-color: #181818;
+}
+
 @media (min-width: 1024px) {
   body {
     display: flex;
@@ -90,4 +94,3 @@
   width: 880px;
   max-width: 880px;
 }
-
