@@ -72,7 +72,7 @@ import "../script.js"
     <input type="checkbox" id="classOther" name="class[]" value="Other" class="mr-2">
     <span class="text-gray-100">Other:</span>
   </label>
-  <input type="text" id="otherClass" name="other_class" class="w-full p-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 text-black" placeholder="Enter other class" style="display: none;">
+  <input type="text" id="otherClass" name="other_class" class="w-full p-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 text-black" placeholder="Have another skill feel free to type it in!" style="display: none;">
           </div>
           
         </div>
