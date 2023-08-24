@@ -111,7 +111,7 @@
           >
         </div>
         <div class="image-container">
-          <img class="w-custom rounded" src="src/assets/discord.png" alt="" />
+          <img class="w-custom rounded" src="src/assets/car.png" alt="" />
         </div>
       </div>
     </section>
