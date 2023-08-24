@@ -31,10 +31,10 @@ import BioCard from "../components/BioCard.vue";
       <BioCard
         name="Zain"
         desc="Hello, my name is Zain. I am looking forward to teaching you all about programming! Currently, I have 3 years of experience in both Python and Raspberry Pi."
-        langs="Python"
-        discord="@yourmom"
-        pos="Co-Founder, Treasurer, Teacher"
-        imgurl="discord.png"
+        langs="Python, Raspberry Pi"
+        discord="@zaindaman"
+        pos="Co-Founder, Treasurer, Teacher, Web Dev"
+        imgurl="zain.jpg"
       />
 
       <BioCard
