@@ -213,7 +213,7 @@ window.onload = function () {
         </div>
 
       </form>
-      <div id="errorBox" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10 gap-10">
+      <div id="errorBox" class="hidden fixed inset-0  items-center justify-center bg-black bg-opacity-50 z-10 gap-10">
         <div class="bg-gray-700 p-20 m-10 rounded shadow flex-center justify-center text-center gap-10">
           <p class="text-red-600 text-3xl font-extrabold">Failed to submit form</p>
           <button id="closeErrorBox" class="mt-2 px-10 py-3 bg-red-600 text-red-100 rounded">Close</button>
@@ -221,7 +221,7 @@ window.onload = function () {
       </div>
 
       <div id="successBox"
-        class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10 gap-10">
+        class="hidden fixed inset-0 items-center justify-center bg-black bg-opacity-50 z-10 gap-10">
         <div class="bg-green-500 p-20 m-10 px-32 rounded shadow flex-center justify-center text-center gap-10">
           <p class="text-white text-3xl font-extrabold">Success!</p>
           <button id="closeSuccessBox" class="mt-2 px-10 py-3 bg-gray-700 text-white rounded">Close</button>
