@@ -53,7 +53,7 @@
     <section class="flex flex-col justify-center gap-36">
       <div class="flex justify-center gap-24">
         <div class="image-container">
-          <img class="w-custom rounded " src="src/assets/discord.png" alt="" />
+          <img class="w-custom rounded " src="src/assets/circuit.avif" alt="" />
         </div>
         <div>
           <h2 class="txt-custom text-5xl font-extrabold py-5 text-white mt-1">
