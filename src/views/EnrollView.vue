@@ -1,4 +1,10 @@
 <script setup>
+import pyicon from "../components/icons/IconPython.vue"
+import unityicon from "../components/icons/IconUnity.vue"
+import iconrpi from "../components/icons/IconRPI.vue"
+import scratchicon from "../components/icons/IconScratch.vue"
+import left from "../components/icons/IconLeft.vue"
+import right from "../components/icons/IconRight.vue"
 window.onload = function () {
   const formbar = document.getElementById('formbar');
   const openPopupButton = document.getElementById('open-popup-btn');
@@ -234,38 +240,38 @@ window.onload = function () {
   <main id="main" class="flex px-6 mb-10">
     <section>
       <div class="wrapper">
-        <i id="left" class="fa-solid fa-angle-left"></i>
+        <i id="left" class="fa-solid fa-angle-left text-center"> <left /> </i>
         <ul class="carousel">
           <li class="cardEn">
-            <div class="img"><img src="../assets/scratch.png" alt="img" draggable="false"></div>
+            <div class="img"><scratchicon /></div>
             <h2 class="text-black font-extrabold">Scratch</h2>
             <h3 class="text-white font-bold pb-5">Beginner</h3>
             <p class = "px-5 text-center text-white">Scratch is a dynamic block code language developed by MIT, designed to teach kids how to code. Scratch 
         Scratch is excellent at teaching beginners how to think logically, introducing important concepts and letting students explore without the addition of boilerplatey syntax.</p>
           </li>
           <li class="cardEn">
-            <div class="img"><img src="../assets/python.png" alt="img" draggable="false"></div>
+            <div class="img"><pyicon/></div>
             <h2 class="text-black font-extrabold">Python Basic</h2>
             <h3 class="text-white font-bold pb-5">Beginner-Intermediate</h3>
             <p class = "px-5 text-center text-white">This course jumps right into a text based programming language: Python. Python is a general purpose language 
         developed by Guido van Rossum, and it is one of the easiest languages to learn. Despite its simpilicty, has been used in many important applications (i.e. machine learning).</p>
           </li>
           <li class="cardEn">
-            <div class="img"><img src="../assets/python.png" alt="img" draggable="false"></div>
+            <div class="img"><pyicon/></div>
             <h2 h2 class="text-black font-extrabold">Python Advanced</h2>
             <h3 class="text-white font-bold pb-5">Intermediate</h3>
             <p class = "px-5 text-center text-white">This course aims to focus on more advanced applications of Python. Rather than simply learning Python as a language, students will get to understand that languages are only tools. We'll dive
          into advanced language concepts (i.e. classes), data structures, algorithms, and real-world projects.</p>
           </li>
           <li class="cardEn">
-            <div class="img"><img src="../assets/unity.jpg" alt="img" draggable="false"></div>
+            <div class="img"><unityicon /></div>
             <h2 class="text-black font-extrabold">Unity</h2>
             <h3 class="text-white font-bold pb-5">Intermediate-Advanced</h3>
             <p class = "px-5 text-center text-white">In this class, we'll take a look at Unity, an amazing cross-platform game engine that is used by many professionals to create popular games like 
         Call of Duty, Pokemon Go, Beat Saber, and more! In this class, you'll learn, yourself, how to use this tool to create amazing games and projects.</p>
           </li>
           <li class="cardEn">
-            <div class="img"><img src="../assets/raspberrypi.png" alt="img" draggable="false"></div>
+            <div class="img"><iconrpi /></div>
             <h2 class="text-black font-extrabold">Raspberry Pi</h2>
             <h3 class="text-white font-bold pb-5">Advanced</h3> 
             <p class = "px-5 text-center text-white"> Learn to use hardware alongside software to create exciting projects with the Raspberry Pi and the new Raspberry Pi Pico microcontroller. In this class
@@ -273,7 +279,7 @@ window.onload = function () {
             </p>
           </li>
         </ul>
-        <i id="right" class="fa-solid fa-angle-right"></i>
+        <i id="right" class="fa-solid fa-angle-right"> <right /></i>
       </div>
     </section>
   </main>
@@ -431,10 +437,12 @@ window.onload = function () {
 }
 
 .carousel .cardEn .img {
-  background: #1dad5077;
+  background: #04589877;
   height: 148px;
   width: 148px;
   border-radius: 50%;
+  border-color:aqua;
+  border-width: 2px;
 }
 
 .cardEn .img img {
@@ -442,7 +450,6 @@ window.onload = function () {
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #fff;
 }
 
 .carousel .cardEn h2 {
