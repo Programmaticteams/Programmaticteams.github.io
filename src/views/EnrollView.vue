@@ -136,7 +136,8 @@ window.onload = function () {
       carousel.classList.remove("no-transition");
     }
 
-
+    clearTimeout(timeoutId);
+    if (!wrapper.matches(":hover")) autoplay();
 
   }
 
@@ -161,7 +162,6 @@ window.onload = function () {
     } else {
       isAutoPlay = false;
       clearTimeout(timeoutId);
-      autoplay()
 
     }
   }
@@ -170,7 +170,7 @@ window.onload = function () {
   carousel.addEventListener("mousedown", dragStart);
   carousel.addEventListener("mousemove", dragging);
   document.addEventListener("mouseup", dragStop);
-  carousel.addEventListener("scroll", infiniteScroll);
+  wrapper.addEventListener("mouseenter", () =>{ clearTimeout(timeoutId); toggleSwitch.checked = !toggleSwitch.checked;});
 
 
 
