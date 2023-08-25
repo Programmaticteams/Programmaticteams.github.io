@@ -84,7 +84,9 @@ window.onload = function () {
   const arrowBtns = document.querySelectorAll(".wrapper i");
   const carouselChildrens = [...carousel.children];
   let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
-  // Get the number of cards that can fit in the carousel at once
+
+
+
   let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
   // Insert copies of the last few cards to beginning of carousel for infinite scrolling
   carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
@@ -133,36 +135,68 @@ window.onload = function () {
       carousel.scrollLeft = carousel.offsetWidth;
       carousel.classList.remove("no-transition");
     }
-    // Clear existing timeout & start autoplay if mouse is not hovering over carousel
-    clearTimeout(timeoutId);
-    if (!wrapper.matches(":hover")) autoPlay();
+
+
+
   }
-  const autoPlay = () => {
-    if (window.innerWidth < 800) return;
-    timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+
+
+  function autoplay() {
+    if (!isAutoPlay) return;
+    carousel.scrollLeft += firstCardWidth;
+
+    timeoutId = setTimeout(autoplay, 1500);
   }
-  autoPlay();
+  const toggleSwitch = document.getElementById("toggleSwitch");
+
+  // Function to handle toggle switch state change
+  function handleToggleChange() {
+    const newState = toggleSwitch.checked;
+
+    if (newState) {
+      isAutoPlay = true;
+
+      autoplay()
+
+    } else {
+      isAutoPlay = false;
+      clearTimeout(timeoutId);
+      autoplay()
+
+    }
+  }
+  autoplay()
+  toggleSwitch.addEventListener("click", handleToggleChange);
   carousel.addEventListener("mousedown", dragStart);
   carousel.addEventListener("mousemove", dragging);
   document.addEventListener("mouseup", dragStop);
   carousel.addEventListener("scroll", infiniteScroll);
-  wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-  wrapper.addEventListener("mouseleave", autoPlay);
+
+
+
 }
+
+
+
 </script>
 
 <template>
-    <h2
-      class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 mb-1 font-extrabold text-8xl pb-2 mt-24">
-      Start Learning today!
-    </h2>
-    <button id="open-popup-btn"
-      class="bg-gray-500 hover:bg-gray-600 active:bg-gray-600 p-5 rounded shadow-md font-extrabold text-blue-200 m-5 text-base open-popup-btn"
-      role="link">
-      Enroll Now &rarr;
-    </button>
- 
-
+  <h2
+    class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 mb-1 font-extrabold text-8xl pb-2 mt-24">
+    Start Learning today!
+  </h2>
+  <button id="open-popup-btn"
+    class="bg-gray-500 hover:bg-gray-600 active:bg-gray-600 p-5 rounded shadow-md font-extrabold text-blue-200 m-5 text-base open-popup-btn"
+    role="link">
+    Enroll Now &rarr;
+  </button>
+  <div class="gap-5 mb-5 flex bg-blue-800 p-2 rounded-sm">
+    <h4 class="font-extrabold text-white text-2xl">Autoplay: </h4> <hr/>
+    <label class="switch">
+      <input type="checkbox" id="toggleSwitch" checked>
+      <span class="slider"></span>
+    </label>
+  </div>
   <aside id="formbar" class="bg-slate-700 shadow-lg">
     <button id="close-popup-btn"
       class="right-5 absolute top-5 hover:text-gray-300 focus:outline-none p-1 bg-white text-gray-900 rounded-lg">
@@ -225,8 +259,7 @@ window.onload = function () {
         </div>
       </div>
 
-      <div id="successBox"
-        class="hidden fixed inset-0 items-center justify-center bg-black bg-opacity-50 z-10 gap-10">
+      <div id="successBox" class="hidden fixed inset-0 items-center justify-center bg-black bg-opacity-50 z-10 gap-10">
         <div class="bg-green-500 p-20 m-10 px-32 rounded shadow flex-center justify-center text-center gap-10">
           <p class="text-white text-3xl font-extrabold">Success!</p>
           <button id="closeSuccessBox" class="mt-2 px-10 py-3 bg-gray-700 text-white rounded">Close</button>
@@ -235,51 +268,74 @@ window.onload = function () {
     </div>
   </aside>
 
-
-  <!--  -->
   <main id="main" class="flex px-6 mb-10">
+
+
     <section>
       <div class="wrapper">
-        <i id="left" class="fa-solid fa-angle-left text-center"> <left /> </i>
+        <i id="left" class="fa-solid fa-angle-left text-center">
+          <left />
+        </i>
         <ul class="carousel">
           <li class="cardEn">
-            <div class="img"><scratchicon /></div>
+            <div class="img">
+              <scratchicon />
+            </div>
             <h2 class="text-black font-extrabold">Scratch</h2>
             <h3 class="text-white font-bold pb-5">Beginner</h3>
-            <p class = "px-5 text-center text-white">Scratch is a dynamic block code language developed by MIT, designed to teach kids how to code. Scratch 
-        Scratch is excellent at teaching beginners how to think logically, introducing important concepts and letting students explore without the addition of boilerplatey syntax.</p>
+            <p class="px-5 text-center text-white">Scratch is a dynamic block code language developed by MIT, designed to
+              teach kids how to code. Scratch
+              Scratch is excellent at teaching beginners how to think logically, introducing important concepts and
+              letting students explore without the addition of boilerplatey syntax.</p>
           </li>
           <li class="cardEn">
-            <div class="img"><pyicon/></div>
+            <div class="img">
+              <pyicon />
+            </div>
             <h2 class="text-black font-extrabold">Python Basic</h2>
             <h3 class="text-white font-bold pb-5">Beginner-Intermediate</h3>
-            <p class = "px-5 text-center text-white">This course jumps right into a text based programming language: Python. Python is a general purpose language 
-        developed by Guido van Rossum, and it is one of the easiest languages to learn. Despite its simpilicty, has been used in many important applications (i.e. machine learning).</p>
+            <p class="px-5 text-center text-white">This course jumps right into a text based programming language: Python.
+              Python is a general purpose language
+              developed by Guido van Rossum, and it is one of the easiest languages to learn. Despite its simpilicty, has
+              been used in many important applications (i.e. machine learning).</p>
           </li>
           <li class="cardEn">
-            <div class="img"><pyicon/></div>
+            <div class="img">
+              <pyicon />
+            </div>
             <h2 h2 class="text-black font-extrabold">Python Advanced</h2>
             <h3 class="text-white font-bold pb-5">Intermediate</h3>
-            <p class = "px-5 text-center text-white">This course aims to focus on more advanced applications of Python. Rather than simply learning Python as a language, students will get to understand that languages are only tools. We'll dive
-         into advanced language concepts (i.e. classes), data structures, algorithms, and real-world projects.</p>
+            <p class="px-5 text-center text-white">This course aims to focus on more advanced applications of Python.
+              Rather than simply learning Python as a language, students will get to understand that languages are only
+              tools. We'll dive
+              into advanced language concepts (i.e. classes), data structures, algorithms, and real-world projects.</p>
           </li>
           <li class="cardEn">
-            <div class="img"><unityicon /></div>
+            <div class="img">
+              <unityicon />
+            </div>
             <h2 class="text-black font-extrabold">Unity</h2>
             <h3 class="text-white font-bold pb-5">Intermediate-Advanced</h3>
-            <p class = "px-5 text-center text-white">In this class, we'll take a look at Unity, an amazing cross-platform game engine that is used by many professionals to create popular games like 
-        Call of Duty, Pokemon Go, Beat Saber, and more! In this class, you'll learn, yourself, how to use this tool to create amazing games and projects.</p>
+            <p class="px-5 text-center text-white">In this class, we'll take a look at Unity, an amazing cross-platform
+              game engine that is used by many professionals to create popular games like
+              Call of Duty, Pokemon Go, Beat Saber, and more! In this class, you'll learn, yourself, how to use this tool
+              to create amazing games and projects.</p>
           </li>
           <li class="cardEn">
-            <div class="img"><iconrpi /></div>
+            <div class="img">
+              <iconrpi />
+            </div>
             <h2 class="text-black font-extrabold">Raspberry Pi</h2>
-            <h3 class="text-white font-bold pb-5">Advanced</h3> 
-            <p class = "px-5 text-center text-white"> Learn to use hardware alongside software to create exciting projects with the Raspberry Pi and the new Raspberry Pi Pico microcontroller. In this class
+            <h3 class="text-white font-bold pb-5">Advanced</h3>
+            <p class="px-5 text-center text-white"> Learn to use hardware alongside software to create exciting projects
+              with the Raspberry Pi and the new Raspberry Pi Pico microcontroller. In this class
               you'll learn how software can interact with a real world enviorment
             </p>
           </li>
         </ul>
-        <i id="right" class="fa-solid fa-angle-right"> <right /></i>
+        <i id="right" class="fa-solid fa-angle-right">
+          <right />
+        </i>
       </div>
     </section>
   </main>
@@ -441,7 +497,7 @@ window.onload = function () {
   height: 148px;
   width: 148px;
   border-radius: 50%;
-  border-color:aqua;
+  border-color: aqua;
   border-width: 2px;
 }
 
@@ -473,5 +529,59 @@ window.onload = function () {
   .wrapper .carousel {
     grid-auto-columns: 100%;
   }
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 </style>
