@@ -123,7 +123,6 @@ window.onload = function () {
     carousel.classList.remove("dragging");
   }
   const infiniteScroll = () => {
-    // If the carousel is at the beginning, scroll to the end
     if (carousel.scrollLeft === 0) {
       carousel.classList.add("no-transition");
       carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
@@ -136,41 +135,39 @@ window.onload = function () {
       carousel.classList.remove("no-transition");
     }
 
+}
+
+
+function autoplay() {
+  if (!isAutoPlay) return;
+  carousel.scrollLeft += firstCardWidth;
+
+  timeoutId = setTimeout(autoplay, 1000);
+}
+const toggleSwitch = document.getElementById("toggleSwitch");
+
+// Function to handle toggle switch state change
+function handleToggleChange() {
+  const newState = toggleSwitch.checked;
+
+  if (newState) {
+    isAutoPlay = true;
+
+    autoplay()
+
+  } else {
+    isAutoPlay = false;
     clearTimeout(timeoutId);
-    if (!wrapper.matches(":hover")) autoplay();
 
   }
-
-
-  function autoplay() {
-    if (!isAutoPlay) return;
-    carousel.scrollLeft += firstCardWidth;
-
-    timeoutId = setTimeout(autoplay, 1500);
-  }
-  const toggleSwitch = document.getElementById("toggleSwitch");
-
-  // Function to handle toggle switch state change
-  function handleToggleChange() {
-    const newState = toggleSwitch.checked;
-
-    if (newState) {
-      isAutoPlay = true;
-
-      autoplay()
-
-    } else {
-      isAutoPlay = false;
-      clearTimeout(timeoutId);
-
-    }
-  }
-  autoplay()
-  toggleSwitch.addEventListener("click", handleToggleChange);
-  carousel.addEventListener("mousedown", dragStart);
-  carousel.addEventListener("mousemove", dragging);
-  document.addEventListener("mouseup", dragStop);
-  wrapper.addEventListener("mouseenter", () =>{ clearTimeout(timeoutId); toggleSwitch.checked = !toggleSwitch.checked;});
+}
+autoplay()
+toggleSwitch.addEventListener("click", handleToggleChange);
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+carousel.addEventListener("scroll", infiniteScroll);
+wrapper.addEventListener("mouseenter", () => { clearTimeout(timeoutId); toggleSwitch.checked = false; });
 
 
 
@@ -191,7 +188,8 @@ window.onload = function () {
     Enroll Now &rarr;
   </button>
   <div class="gap-5 mb-5 flex bg-blue-800 p-2 rounded-sm">
-    <h4 class="font-extrabold text-white text-2xl">Autoplay: </h4> <hr/>
+    <h4 class="font-extrabold text-white text-2xl">Autoplay: </h4>
+    <hr />
     <label class="switch">
       <input type="checkbox" id="toggleSwitch" checked>
       <span class="slider"></span>
