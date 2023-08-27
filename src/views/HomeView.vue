@@ -109,7 +109,7 @@
     </section>
   </article>
   <hr class="mx-auto w-5/6 mb-24 border border-slate-400 mt-32" />
-  <footer class="flex flex-col justify-center mb-10">
+  <section class="flex flex-col justify-center mb-10">
     <h4 class="text-center text-5xl font-extrabold text-white mt-1 mb-10">
       Contact Us
     </h4>
@@ -121,7 +121,7 @@
     <h5 class="text-2xl text-center text-white font-extrabold p-2">
       programmaticteams@gmail.com
     </h5>
-  </footer>
+  </section>
 </template>
 
 <style scoped>
