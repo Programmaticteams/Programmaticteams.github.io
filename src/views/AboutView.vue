@@ -1,11 +1,17 @@
 <script setup>
-import about from "../components/About.vue"
+import about from "../components/About.vue";
 </script>
 
 <template>
   <div class="container gap-96">
     <div class="logo-container">
-      <img alt="Programmatic logo" class="logo" src="src/assets/logo.png" width="125" height="125" />
+      <img
+        alt="Programmatic logo"
+        class="logo"
+        src="src/assets/logo.png"
+        width="125"
+        height="125"
+      />
     </div>
     <header>
       <main>
@@ -14,28 +20,27 @@ import about from "../components/About.vue"
         </div>
       </main>
     </header>
-
   </div>
 </template>
 
 <style scoped>
 .container {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 header {
   line-height: 1.5;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
 }
 
 .logo-container {
-  margin-top: auto; 
-  margin-bottom: auto; 
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .logo {
@@ -43,29 +48,26 @@ header {
 }
 
 .content {
-  flex: 1; 
+  flex: 1;
 }
 
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; 
-    align-items: stretch; 
+    flex-direction: column;
+    align-items: stretch;
   }
 
   header {
-    justify-content: center; 
+    justify-content: center;
   }
 
   .logo-container {
-    margin: 1rem 0; 
+    margin: 1rem 0;
   }
 }
 </style>
 
-
-
-
-  <!-- <header class="bg--about flex-col text-center shadow-lg">
+<!-- <header class="bg--about flex-col text-center shadow-lg">
     <h2
       class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 mb-3 font-extrabold text-8xl pb-2"
     >
@@ -134,7 +136,6 @@ header {
       </p>
     </section>
   </footer> -->
-
 
 <!-- <style scoped>
 .bg--about {

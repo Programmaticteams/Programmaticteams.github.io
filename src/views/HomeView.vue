@@ -11,14 +11,6 @@
     >
       Programmatic
     </h1>
-    <!-- <RouterLink to="/about"
-      ><button
-        class="bg-gray-600 hover:bg-gray-500 active:bg-gray-600 p-3 rounded shadow-md font-bold text-green-300 m-8"
-        role="link"
-      >
-        Why Us?
-      </button></RouterLink
-    > -->
     <a href="/enroll"
       ><button
         class="bg-gray-600 hover:bg-gray-500 active:bg-gray-600 p-3 rounded shadow-md font-bold text-blue-300 m-8"

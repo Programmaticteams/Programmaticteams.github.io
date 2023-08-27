@@ -1,71 +1,73 @@
 <script setup>
-import pyicon from "../components/icons/IconPython.vue"
-import unityicon from "../components/icons/IconUnity.vue"
-import iconrpi from "../components/icons/IconRPI.vue"
-import scratchicon from "../components/icons/IconScratch.vue"
-import left from "../components/icons/IconLeft.vue"
-import right from "../components/icons/IconRight.vue"
+import pyicon from "../components/icons/IconPython.vue";
+import unityicon from "../components/icons/IconUnity.vue";
+import iconrpi from "../components/icons/IconRPI.vue";
+import scratchicon from "../components/icons/IconScratch.vue";
+import left from "../components/icons/IconLeft.vue";
+import right from "../components/icons/IconRight.vue";
 window.onload = function () {
-  const formbar = document.getElementById('formbar');
-  const openPopupButton = document.getElementById('open-popup-btn');
-  const overlay = document.getElementById('overlay');
-  const closePopupButton = document.getElementById('close-popup-btn')
-  const errorBox = document.getElementById('errorBox');
-  const closeErrorBox = document.getElementById('closeErrorBox');
-  const successBox = document.getElementById('successBox');
-  const closeSuccessBox = document.getElementById('closeSuccessBox');
+  const formbar = document.getElementById("formbar");
+  const openPopupButton = document.getElementById("open-popup-btn");
+  const overlay = document.getElementById("overlay");
+  const closePopupButton = document.getElementById("close-popup-btn");
+  const errorBox = document.getElementById("errorBox");
+  const closeErrorBox = document.getElementById("closeErrorBox");
+  const successBox = document.getElementById("successBox");
+  const closeSuccessBox = document.getElementById("closeSuccessBox");
 
-  openPopupButton.addEventListener('click', () => {
+  openPopupButton.addEventListener("click", () => {
     formbar.style.right = "0";
     overlay.style.display = "block";
     setTimeout(() => {
       overlay.style.opacity = "0.60";
-    }, 10);;
+    }, 10);
 
-    document.body.classList.add('overflow-hidden-compensate', 'pointer-events-none', 'fixed', 'inset-0', 'pr-2.5');
-
-
+    document.body.classList.add(
+      "overflow-hidden-compensate",
+      "pointer-events-none",
+      "fixed",
+      "inset-0",
+      "pr-2.5"
+    );
   });
-  const form = document.getElementById('inputForm');
+  const form = document.getElementById("inputForm");
 
-  form.addEventListener('submit', async (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const enrolled = document.querySelector('input[name="message"]:checked').value;
-    const response = await fetch('http://localhost:5050/form/', {
-      method: 'POST',
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const enrolled = document.querySelector(
+      'input[name="message"]:checked'
+    ).value;
+    const response = await fetch("http://localhost:5050/form/", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, email, enrolled })
+      body: JSON.stringify({ name, email, enrolled }),
     });
 
     if (response.status === 204) {
       form.reset();
       closeformbar();
-      successBox.classList.remove('hidden');
-      successBox.classList.add('flex')
-      closeSuccessBox.addEventListener('click', () => {
-        successBox.classList.add('hidden');
-        successBox.classList.remove('flex');
+      successBox.classList.remove("hidden");
+      successBox.classList.add("flex");
+      closeSuccessBox.addEventListener("click", () => {
+        successBox.classList.add("hidden");
+        successBox.classList.remove("flex");
       });
-
     } else {
-
-
-      errorBox.classList.remove('hidden');
-      errorBox.classList.add('flex')
-      closeErrorBox.addEventListener('click', () => {
-        errorBox.classList.add('hidden');
-        errorBox.classList.remove('flex');
+      errorBox.classList.remove("hidden");
+      errorBox.classList.add("flex");
+      closeErrorBox.addEventListener("click", () => {
+        errorBox.classList.add("hidden");
+        errorBox.classList.remove("flex");
       });
     }
   });
 
-
-  closePopupButton.addEventListener('click', () => {
+  closePopupButton.addEventListener("click", () => {
     closeformbar();
   });
 
@@ -75,25 +77,36 @@ window.onload = function () {
     setTimeout(() => {
       overlay.style.display = "none";
     }, 500);
-    document.body.classList.remove('overflow-hidden-compensate', 'pointer-events-none', 'fixed', 'inset-0', 'pr-2.5')
-    formbar.removeEventListener('click', closeformbar);
+    document.body.classList.remove(
+      "overflow-hidden-compensate",
+      "pointer-events-none",
+      "fixed",
+      "inset-0",
+      "pr-2.5"
+    );
+    formbar.removeEventListener("click", closeformbar);
   }
   const wrapper = document.querySelector(".wrapper");
   const carousel = document.querySelector(".carousel");
   const firstCardWidth = carousel.querySelector(".cardEn").offsetWidth;
   const arrowBtns = document.querySelectorAll(".wrapper i");
   const carouselChildrens = [...carousel.children];
-  let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
-
-
+  let isDragging = false,
+    isAutoPlay = true,
+    startX,
+    startScrollLeft,
+    timeoutId;
 
   let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
   // Insert copies of the last few cards to beginning of carousel for infinite scrolling
-  carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
-    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-  });
+  carouselChildrens
+    .slice(-cardPerView)
+    .reverse()
+    .forEach((card) => {
+      carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+    });
   // Insert copies of the first few cards to end of carousel for infinite scrolling
-  carouselChildrens.slice(0, cardPerView).forEach(card => {
+  carouselChildrens.slice(0, cardPerView).forEach((card) => {
     carousel.insertAdjacentHTML("beforeend", card.outerHTML);
   });
   // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
@@ -101,9 +114,10 @@ window.onload = function () {
   carousel.scrollLeft = carousel.offsetWidth;
   carousel.classList.remove("no-transition");
   // Add event listeners for the arrow buttons to scroll the carousel left and right
-  arrowBtns.forEach(btn => {
+  arrowBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+      carousel.scrollLeft +=
+        btn.id == "left" ? -firstCardWidth : firstCardWidth;
     });
   });
   const dragStart = (e) => {
@@ -112,163 +126,231 @@ window.onload = function () {
     // Records the initial cursor and scroll position of the carousel
     startX = e.pageX;
     startScrollLeft = carousel.scrollLeft;
-  }
+  };
   const dragging = (e) => {
     if (!isDragging) return; // if isDragging is false return from here
     // Updates the scroll position of the carousel based on the cursor movement
     carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-  }
+  };
   const dragStop = () => {
     isDragging = false;
     carousel.classList.remove("dragging");
-  }
+  };
   const infiniteScroll = () => {
     if (carousel.scrollLeft === 0) {
       carousel.classList.add("no-transition");
-      carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+      carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
       carousel.classList.remove("no-transition");
     }
     // If the carousel is at the end, scroll to the beginning
-    else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+    else if (
+      Math.ceil(carousel.scrollLeft) ===
+      carousel.scrollWidth - carousel.offsetWidth
+    ) {
       carousel.classList.add("no-transition");
       carousel.scrollLeft = carousel.offsetWidth;
       carousel.classList.remove("no-transition");
     }
+  };
 
-}
+  function autoplay() {
+    if (!isAutoPlay) return;
+    carousel.scrollLeft += firstCardWidth;
 
-
-function autoplay() {
-  if (!isAutoPlay) return;
-  carousel.scrollLeft += firstCardWidth;
-
-  timeoutId = setTimeout(autoplay, 1000);
-}
-const toggleSwitch = document.getElementById("toggleSwitch");
-
-// Function to handle toggle switch state change
-function handleToggleChange() {
-  const newState = toggleSwitch.checked;
-
-  if (newState) {
-    isAutoPlay = true;
-
-    autoplay()
-
-  } else {
-    isAutoPlay = false;
-    clearTimeout(timeoutId);
-
+    timeoutId = setTimeout(autoplay, 1000);
   }
-}
-autoplay()
-toggleSwitch.addEventListener("click", handleToggleChange);
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("mousemove", dragging);
-document.addEventListener("mouseup", dragStop);
-carousel.addEventListener("scroll", infiniteScroll);
-wrapper.addEventListener("mouseenter", () => { clearTimeout(timeoutId); toggleSwitch.checked = false; });
+  const toggleSwitch = document.getElementById("toggleSwitch");
 
+  // Function to handle toggle switch state change
+  function handleToggleChange() {
+    const newState = toggleSwitch.checked;
 
+    if (newState) {
+      isAutoPlay = true;
 
-}
-
-
-
+      autoplay();
+    } else {
+      isAutoPlay = false;
+      clearTimeout(timeoutId);
+    }
+  }
+  autoplay();
+  toggleSwitch.addEventListener("click", handleToggleChange);
+  carousel.addEventListener("mousedown", dragStart);
+  carousel.addEventListener("mousemove", dragging);
+  document.addEventListener("mouseup", dragStop);
+  carousel.addEventListener("scroll", infiniteScroll);
+  wrapper.addEventListener("mouseenter", () => {
+    clearTimeout(timeoutId);
+    toggleSwitch.checked = false;
+  });
+};
 </script>
 
 <template>
   <h2
-    class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 mb-1 font-extrabold text-8xl pb-2 mt-24">
+    class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 mb-1 font-extrabold text-8xl pb-2 mt-24"
+  >
     Start Learning today!
   </h2>
-  <button id="open-popup-btn"
+  <button
+    id="open-popup-btn"
     class="bg-gray-500 hover:bg-gray-600 active:bg-gray-600 p-5 rounded shadow-md font-extrabold text-blue-200 m-5 text-base open-popup-btn"
-    role="link">
+    role="link"
+  >
     Enroll Now &rarr;
   </button>
   <div class="gap-5 mb-5 flex bg-blue-800 p-2 rounded-sm">
-    <h4 class="font-extrabold text-white text-2xl">Autoplay: </h4>
+    <h4 class="font-extrabold text-white text-2xl">Autoplay:</h4>
     <hr />
     <label class="switch">
-      <input type="checkbox" id="toggleSwitch" checked>
+      <input type="checkbox" id="toggleSwitch" checked />
       <span class="slider"></span>
     </label>
   </div>
   <aside id="formbar" class="bg-slate-700 shadow-lg">
-    <button id="close-popup-btn"
-      class="right-5 absolute top-5 hover:text-gray-300 focus:outline-none p-1 bg-white text-gray-900 rounded-lg">
+    <button
+      id="close-popup-btn"
+      class="right-5 absolute top-5 hover:text-gray-300 focus:outline-none p-1 bg-white text-gray-900 rounded-lg"
+    >
       Close
     </button>
     <div class="pt-16 px-6">
       <form id="inputForm" class="text-white">
         <div class="mb-6">
           <label for="name" class="block text-sm font-bold">Name:</label>
-          <input type="text" id="name" name="name" required
-            class="w-full p-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 text-black" />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="w-full p-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 text-black"
+          />
           <br />
           <br />
           <label for="email" class="block text-sm font-bold">Email:</label>
-          <input type="email" id="email" name="email" required
-            class="w-full p-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 text-black" />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="w-full p-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 text-black"
+          />
           <br />
           <br />
-          <label for="enrolled" class="block text-sm font-bold">Class:</label><br />
+          <label for="enrolled" class="block text-sm font-bold">Class:</label
+          ><br />
           <div class="ml-4 space-y-1">
             <label for="message1" class="flex items-center">
-              <input type="radio" id="message1" name="message" value="Pico" required class="mr-2" />
+              <input
+                type="radio"
+                id="message1"
+                name="message"
+                value="Pico"
+                required
+                class="mr-2"
+              />
               <span class="text-gray-100">Pico</span>
             </label>
 
             <label for="message2" class="flex items-center">
-              <input type="radio" id="message2" name="message" value="PyBasic" required class="mr-2" />
+              <input
+                type="radio"
+                id="message2"
+                name="message"
+                value="PyBasic"
+                required
+                class="mr-2"
+              />
               <span class="text-gray-100">Python Basic</span>
             </label>
 
             <label for="message3" class="flex items-center">
-              <input type="radio" id="message3" name="message" value="PyAdv" required class="mr-2" />
+              <input
+                type="radio"
+                id="message3"
+                name="message"
+                value="PyAdv"
+                required
+                class="mr-2"
+              />
               <span class="text-gray-100">Python Advanced</span>
             </label>
 
             <label for="message4" class="flex items-center">
-              <input type="radio" id="message4" name="message" value="Scratch" required class="mr-2" />
+              <input
+                type="radio"
+                id="message4"
+                name="message"
+                value="Scratch"
+                required
+                class="mr-2"
+              />
               <span class="text-gray-100">Scratch</span>
             </label>
 
             <label for="message5" class="flex items-center">
-              <input type="radio" id="message5" name="message" value="Unity" required class="mr-2" />
+              <input
+                type="radio"
+                id="message5"
+                name="message"
+                value="Unity"
+                required
+                class="mr-2"
+              />
               <span class="text-gray-100">Unity</span>
             </label>
           </div>
         </div>
 
         <div class="flex justify-end">
-          <button type="submit"
-            class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300">
+          <button
+            type="submit"
+            class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300"
+          >
             Submit
           </button>
         </div>
-
       </form>
-      <div id="errorBox" class="hidden fixed inset-0  items-center justify-center bg-black bg-opacity-50 z-10 gap-10">
-        <div class="bg-gray-700 p-20 m-10 rounded shadow flex-center justify-center text-center gap-10">
-          <p class="text-red-600 text-3xl font-extrabold">Failed to submit form</p>
-          <button id="closeErrorBox" class="mt-2 px-10 py-3 bg-red-600 text-red-100 rounded">Close</button>
+      <div
+        id="errorBox"
+        class="hidden fixed inset-0 items-center justify-center bg-black bg-opacity-50 z-10 gap-10"
+      >
+        <div
+          class="bg-gray-700 p-20 m-10 rounded shadow flex-center justify-center text-center gap-10"
+        >
+          <p class="text-red-600 text-3xl font-extrabold">
+            Failed to submit form
+          </p>
+          <button
+            id="closeErrorBox"
+            class="mt-2 px-10 py-3 bg-red-600 text-red-100 rounded"
+          >
+            Close
+          </button>
         </div>
       </div>
 
-      <div id="successBox" class="hidden fixed inset-0 items-center justify-center bg-black bg-opacity-50 z-10 gap-10">
-        <div class="bg-green-500 p-20 m-10 px-32 rounded shadow flex-center justify-center text-center gap-10">
+      <div
+        id="successBox"
+        class="hidden fixed inset-0 items-center justify-center bg-black bg-opacity-50 z-10 gap-10"
+      >
+        <div
+          class="bg-green-500 p-20 m-10 px-32 rounded shadow flex-center justify-center text-center gap-10"
+        >
           <p class="text-white text-3xl font-extrabold">Success!</p>
-          <button id="closeSuccessBox" class="mt-2 px-10 py-3 bg-gray-700 text-white rounded">Close</button>
+          <button
+            id="closeSuccessBox"
+            class="mt-2 px-10 py-3 bg-gray-700 text-white rounded"
+          >
+            Close
+          </button>
         </div>
       </div>
     </div>
   </aside>
 
   <main id="main" class="flex px-6 mb-10">
-
-
     <section>
       <div class="wrapper">
         <i id="left" class="fa-solid fa-angle-left text-center">
@@ -281,10 +363,13 @@ wrapper.addEventListener("mouseenter", () => { clearTimeout(timeoutId); toggleSw
             </div>
             <h2 class="text-black font-extrabold">Scratch</h2>
             <h3 class="text-white font-bold pb-5">Beginner</h3>
-            <p class="px-5 text-center text-white">Scratch is a dynamic block code language developed by MIT, designed to
-              teach kids how to code. Scratch
-              Scratch is excellent at teaching beginners how to think logically, introducing important concepts and
-              letting students explore without the addition of boilerplatey syntax.</p>
+            <p class="px-5 text-center text-white">
+              Scratch is a dynamic block code language developed by MIT,
+              designed to teach kids how to code. Scratch Scratch is excellent
+              at teaching beginners how to think logically, introducing
+              important concepts and letting students explore without the
+              addition of boilerplatey syntax.
+            </p>
           </li>
           <li class="cardEn">
             <div class="img">
@@ -292,10 +377,13 @@ wrapper.addEventListener("mouseenter", () => { clearTimeout(timeoutId); toggleSw
             </div>
             <h2 class="text-black font-extrabold">Python Basic</h2>
             <h3 class="text-white font-bold pb-5">Beginner-Intermediate</h3>
-            <p class="px-5 text-center text-white">This course jumps right into a text based programming language: Python.
-              Python is a general purpose language
-              developed by Guido van Rossum, and it is one of the easiest languages to learn. Despite its simpilicty, has
-              been used in many important applications (i.e. machine learning).</p>
+            <p class="px-5 text-center text-white">
+              This course jumps right into a text based programming language:
+              Python. Python is a general purpose language developed by Guido
+              van Rossum, and it is one of the easiest languages to learn.
+              Despite its simpilicty, has been used in many important
+              applications (i.e. machine learning).
+            </p>
           </li>
           <li class="cardEn">
             <div class="img">
@@ -303,10 +391,13 @@ wrapper.addEventListener("mouseenter", () => { clearTimeout(timeoutId); toggleSw
             </div>
             <h2 h2 class="text-black font-extrabold">Python Advanced</h2>
             <h3 class="text-white font-bold pb-5">Intermediate</h3>
-            <p class="px-5 text-center text-white">This course aims to focus on more advanced applications of Python.
-              Rather than simply learning Python as a language, students will get to understand that languages are only
-              tools. We'll dive
-              into advanced language concepts (i.e. classes), data structures, algorithms, and real-world projects.</p>
+            <p class="px-5 text-center text-white">
+              This course aims to focus on more advanced applications of Python.
+              Rather than simply learning Python as a language, students will
+              get to understand that languages are only tools. We'll dive into
+              advanced language concepts (i.e. classes), data structures,
+              algorithms, and real-world projects.
+            </p>
           </li>
           <li class="cardEn">
             <div class="img">
@@ -314,10 +405,13 @@ wrapper.addEventListener("mouseenter", () => { clearTimeout(timeoutId); toggleSw
             </div>
             <h2 class="text-black font-extrabold">Unity</h2>
             <h3 class="text-white font-bold pb-5">Intermediate-Advanced</h3>
-            <p class="px-5 text-center text-white">In this class, we'll take a look at Unity, an amazing cross-platform
-              game engine that is used by many professionals to create popular games like
-              Call of Duty, Pokemon Go, Beat Saber, and more! In this class, you'll learn, yourself, how to use this tool
-              to create amazing games and projects.</p>
+            <p class="px-5 text-center text-white">
+              In this class, we'll take a look at Unity, an amazing
+              cross-platform game engine that is used by many professionals to
+              create popular games like Call of Duty, Pokemon Go, Beat Saber,
+              and more! In this class, you'll learn, yourself, how to use this
+              tool to create amazing games and projects.
+            </p>
           </li>
           <li class="cardEn">
             <div class="img">
@@ -325,9 +419,11 @@ wrapper.addEventListener("mouseenter", () => { clearTimeout(timeoutId); toggleSw
             </div>
             <h2 class="text-black font-extrabold">Raspberry Pi</h2>
             <h3 class="text-white font-bold pb-5">Advanced</h3>
-            <p class="px-5 text-center text-white"> Learn to use hardware alongside software to create exciting projects
-              with the Raspberry Pi and the new Raspberry Pi Pico microcontroller. In this class
-              you'll learn how software can interact with a real world enviorment
+            <p class="px-5 text-center text-white">
+              Learn to use hardware alongside software to create exciting
+              projects with the Raspberry Pi and the new Raspberry Pi Pico
+              microcontroller. In this class you'll learn how software can
+              interact with a real world enviorment
             </p>
           </li>
         </ul>
@@ -342,7 +438,10 @@ wrapper.addEventListener("mouseenter", () => { clearTimeout(timeoutId); toggleSw
     class="mb-20 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-600 to-cyan-200 text-3xl text-center">
     Enroll Now, By Clicking The Enroll Button At
     The Top Of The Page</h1> -->
-  <div id="overlay" class="fixed inset-0 bg-black opacity-50 pointer-events-none z-49"></div>
+  <div
+    id="overlay"
+    class="fixed inset-0 bg-black opacity-50 pointer-events-none z-49"
+  ></div>
 </template>
 
 <style scoped>
@@ -405,8 +504,6 @@ wrapper.addEventListener("mouseenter", () => { clearTimeout(timeoutId); toggleSw
     transform: translateX(100%);
   }
 }
-
-
 
 .wrapper {
   max-width: 1100px;
@@ -513,7 +610,7 @@ wrapper.addEventListener("mouseenter", () => { clearTimeout(timeoutId); toggleSw
 }
 
 .carousel .cardEn span {
-  color: #6A6D78;
+  color: #6a6d78;
   font-size: 1.31rem;
 }
 
@@ -553,8 +650,8 @@ wrapper.addEventListener("mouseenter", () => { clearTimeout(timeoutId); toggleSw
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -565,19 +662,19 @@ wrapper.addEventListener("mouseenter", () => { clearTimeout(timeoutId); toggleSw
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-input:checked+.slider {
-  background-color: #2196F3;
+input:checked + .slider {
+  background-color: #2196f3;
 }
 
-input:focus+.slider {
-  box-shadow: 0 0 1px #2196F3;
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
