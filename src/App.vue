@@ -50,7 +50,7 @@ import { RouterLink, RouterView } from "vue-router";
   </nav>
 
   <RouterView />
-  <footer class="bg-gray-800 text-white py-8 w-full">
+  <footer class="bg-gray-800 text-white py-8 w-full bottom-0">
     <div class="container mx-auto flex items-center justify-between py-5 mb-4">
       <div class="flex items-center gap-4">
         <img src="./assets/logo.png" alt="Programmatic Logo" class="w-10 h-10" />

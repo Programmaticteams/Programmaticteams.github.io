@@ -5,6 +5,7 @@ import TeamView from "../views/OurTeamView.vue";
 import VolunteerView from "../views/VolunteerView.vue";
 import EnrollView from "../views/EnrollView.vue";
 import ArticlesView from "../views/ArticlesView.vue";
+import Admin from "../views/AdminView.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,6 +40,11 @@ const router = createRouter({
       path: "/articles",
       name: "articles",
       component: ArticlesView,
+    },
+    {
+      path: "/admin",
+      name: "admin",
+      component: Admin,
     },
   ],
 });
