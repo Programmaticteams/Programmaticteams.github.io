@@ -1,47 +1,48 @@
 <script setup>
 window.onload = function () {
 
-    // const loginButton = document.getElementById('login-btn');
-    // const usernameInput = document.getElementById('username');
-    // const passwordInput = document.getElementById('password');
-    // const messageElement = document.getElementById('message');
-    // const main = document.getElementById('main')
-    // const loginform = document.getElementById('login-form')
+//     const loginButton = document.getElementById('login-btn');
+//     const usernameInput = document.getElementById('username');
+//     const passwordInput = document.getElementById('password');
+//     const messageElement = document.getElementById('message');
+//     const main = document.getElementById('main')
+//     const loginform = document.getElementById('login-form')
 
-    // loginButton.addEventListener('click', async (event) => {
-    //     event.preventDefault()
-    //     const user = usernameInput.value;
-    //     const pwd = passwordInput.value;
+//     loginButton.addEventListener('click', async (event) => {
+//         event.preventDefault()
+//         const user = usernameInput.value;
+//         const pwd = passwordInput.value;
 
-    //     const response = await fetch('http://localhost:5050/form/login', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify({ user, pwd })
-    //     });
-    //     if (response.status === 200) {
-    //         messageElement.textContent = 'Login successful';
-    //         usernameInput.value = "";
-    //         passwordInput.value = "";
-    //         console.log("success")
-    //         main.classList.add("flex")
-    //         main.classList.remove("hidden")
-    //         loginform.classList.add("hidden")
-    //     } else {
-    //         messageElement.textContent = 'Login failed. Please check your credentials.';
-    //         passwordInput.value = "";
-    //     }
-    // });
+//         const response = await fetch('http://localhost:5050/form/login', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify({ user, pwd })
+//         });
+//         if (response.status === 200) {
+//             messageElement.textContent = 'Login successful';
+//             usernameInput.value = "";
+//             passwordInput.value = "";
+
+//             main.classList.add("flex")
+//             main.classList.remove("hidden")
+//             loginform.classList.add("hidden")
+//         } else {
+//             messageElement.textContent = 'Login failed. Please check your credentials.';
+//             passwordInput.value = "";
+//         }
+//     });
 
 
-    const tableBody = document.querySelector('#datalistv tbody');
-    const tableBodyEnroll = document.querySelector('#tableliste tbody')
+    const tableBody = document.getElementById('datalistv');
+    const tableBodyEnroll = document.getElementById('tableliste')
     async function fetchData() {
         const response = await fetch('http://localhost:5050/form/volunteer');
         const data = await response.json();
         data.forEach(item => {
             const row = document.createElement('tr');
+            row.classList.add('data-row')
             const nameCell = document.createElement('td');
             const emailCell = document.createElement('td');
             const expertiseCell = document.createElement('td');
@@ -59,6 +60,7 @@ window.onload = function () {
 
             tableBody.appendChild(row);
         });
+        console.log(tableBody)
     }
 
     async function fetchDataEnroll() {
@@ -82,7 +84,7 @@ window.onload = function () {
         });
     }
     // UNCOMMENT LATER
-    // fetchData() 
+    // fetchData()
     // fetchDataEnroll()
 }
 </script>
@@ -97,27 +99,29 @@ window.onload = function () {
         <button type="submit" id="login-btn" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Login</button>
         <p id="message" class="text-red-800"></p>
     </form> -->
-    <main id="main" class="gap-x-80 top-44">
+    <main id="main" class="gap-x-80 top-44 flex">
         <section class="fixed">
             <h1 class="font-extrabold text-gray-200 text-6xl mt-32">Enrolled</h1>
             <!-- NOTE ADD HIDDEN CLASS WHEN USING LOGIN PAGE-->
 
             <div class="row">
                 <div class="column">
-                    <table id="tableliste">
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Enrolled</th>
-                        <tr>
-                            <td>Jonathan</td>
-                            <td>Jonathan@fakkemail.nett</td>
-                            <td>Unity</td>
-                        </tr>
-                        <tr>
-                            <td>Rachel</td>
-                            <td>rachel@fakkemail.nett</td>
-                            <td>PyBasic</td>
-                        </tr>
+                    <table>
+                        <tbody id="tableliste">
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Enrolled</th>
+                            <tr>
+                                <td>Jonathan</td>
+                                <td>Jonathan@fakkemail.nett</td>
+                                <td>Unity</td>
+                            </tr>
+                            <tr>
+                                <td>Rachel</td>
+                                <td>rachel@fakkemail.nett</td>
+                                <td>PyBasic</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -128,25 +132,27 @@ window.onload = function () {
             <h1 class="font-extrabold text-gray-200 text-6xl mt-32">Volunteer</h1>
             <div class="row">
                 <div class="column">
-                    <table id="datalistv">
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Experience</th>
-                            <th>Courses</th>
-                        </tr>
-                        <tr>
-                            <td>Jonathan</td>
-                            <td>Jonathan@fakkemail.nett</td>
-                            <td>Jonathan is a master hacker who hacks kids on roblox lmfao get rket</td>
-                            <td>PyAdv, PyBasic</td>
-                        </tr>
-                        <tr>
-                            <td>Bob</td>
-                            <td>bob@fakkemail.nett</td>
-                            <td>Bob hacked your mom with a potato</td>
-                            <td>PyAdv, Unity</td>
-                        </tr>
+                    <table>
+                        <tbody id="datalistv" class="p-96">
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Experience</th>
+                                <th>Courses</th>
+                            </tr>
+                            <tr>
+                                <td>Jonathan</td>
+                                <td>Jonathan@fakkemail.nett</td>
+                                <td>Jonathan is a master hacker who hacks kids on roblox lmfao get rket</td>
+                                <td>PyAdv, PyBasic</td>
+                            </tr>
+                            <tr>
+                                <td>Bob</td>
+                                <td>bob@fakkemail.nett</td>
+                                <td>Bob hacked your mom with a potato</td>
+                                <td>PyAdv, Unity</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -154,7 +160,7 @@ window.onload = function () {
         </section>
     </main>
 </template>
-<style scoped>
+<style>
 * {
     box-sizing: border-box;
 }
@@ -198,6 +204,7 @@ table {
 }
 
 th,
+tr,
 td {
     text-align: left;
     padding: 16px;
