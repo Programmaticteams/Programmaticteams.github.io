@@ -99,8 +99,8 @@ window.onload = function () {
         <button type="submit" id="login-btn" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Login</button>
         <p id="message" class="text-red-800"></p>
     </form> -->
-    <main id="main" class="gap-x-80 top-44 flex">
-        <section class="fixed">
+    <main id="main" class="gap-x-10 top-44 flex">
+        <section class="flex flex-col gap-10 mt-9 mb-10">
             <h1 class="font-extrabold text-gray-200 text-6xl mt-32">Enrolled</h1>
             <!-- NOTE ADD HIDDEN CLASS WHEN USING LOGIN PAGE-->
 
@@ -126,12 +126,15 @@ window.onload = function () {
                 </div>
             </div>
         </section>
-        <hr class="px-20" />
+
         <div class="border border-gray-600"></div>
-        <section class="flex flex-col gap-20 mt-36 mb-10">
-            <h1 class="font-extrabold text-gray-200 text-6xl mt-32">Volunteer</h1>
+        
+        <section class="flex flex-col gap-10 mt-36 mb-10">
+            <h1 class="font-extrabold text-gray-200 text-6xl ">Volunteered</h1>
             <div class="row">
                 <div class="column">
+                    <div class="container">
+
                     <table>
                         <tbody id="datalistv" class="p-96">
                             <tr>
@@ -155,6 +158,7 @@ window.onload = function () {
                         </tbody>
                     </table>
                 </div>
+             </div>
             </div>
 
         </section>
@@ -197,11 +201,34 @@ window.onload = function () {
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    border: 5px solid #ddd;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
+table th,
+table td {
+  padding: 12px 20px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
 
 th,
 tr,
