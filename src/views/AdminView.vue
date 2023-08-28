@@ -99,8 +99,8 @@ window.onload = function () {
         <button type="submit" id="login-btn" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Login</button>
         <p id="message" class="text-red-800"></p>
     </form> -->
-    <main id="main" class="gap-x-10 top-44 flex">
-        <section class="flex flex-col gap-10 mt-9 mb-10">
+    <main id="main" class="gap-x-40 top-44 flex">
+        <section class="flex flex-col gap-10 mt-7 mb-10">
             <h1 class="font-extrabold text-gray-200 text-6xl mt-32">Enrolled</h1>
             <!-- NOTE ADD HIDDEN CLASS WHEN USING LOGIN PAGE-->
 
