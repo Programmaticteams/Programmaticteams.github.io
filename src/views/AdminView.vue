@@ -99,15 +99,15 @@ window.onload = function () {
         <button type="submit" id="login-btn" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Login</button>
         <p id="message" class="text-red-800"></p>
     </form> -->
-    <main id="main" class="gap-x-40 top-44 flex">
+    <main id="main" class="gap-x-40 top-44 flex m-10">
         <section class="flex flex-col gap-10 mt-7 mb-10">
             <h1 class="font-extrabold text-gray-200 text-6xl mt-32">Enrolled</h1>
             <!-- NOTE ADD HIDDEN CLASS WHEN USING LOGIN PAGE-->
 
             <div class="row">
-                <div class="column">
+                <div class="column ">
                     <table>
-                        <tbody id="tableliste">
+                        <tbody id="tableliste" class="text-black">
                             <th>Name</th>
                             <th>Email</th>
                             <th>Enrolled</th>
@@ -136,7 +136,7 @@ window.onload = function () {
                     <div class="container">
 
                     <table>
-                        <tbody id="datalistv" class="p-96">
+                        <tbody id="datalistv" class="p-96 text-black">
                             <tr>
                                 <th>Name</th>
                                 <th>Email</th>
@@ -207,7 +207,7 @@ table {
   border: none;
   border-radius: 5px;
   background-color: #ffffff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 90px rgba(161, 93, 93, 0.1);
 }
 
 table th,
