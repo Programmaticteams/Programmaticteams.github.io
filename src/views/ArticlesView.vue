@@ -4,6 +4,7 @@ window.onload = function () {
   const markdownContentElement = document.getElementById("markdown-content");
   const backBtn = document.getElementById("back-btn");
   const hiddenstuff = document.getElementById("hidden-content");
+  const title = document.getElementById("title");
   function fetchMarkdownAndConvert(filePath) {
     fetch(filePath)
       .then((response) => response.text())
@@ -22,6 +23,7 @@ window.onload = function () {
       const filePath = event.target.getAttribute("href");
       articlesListElement.classList.add("hidden");
       hiddenstuff.classList.remove("hidden");
+      title.classList.add("hidden");
       fetchMarkdownAndConvert(filePath);
     }
   });
@@ -30,6 +32,7 @@ window.onload = function () {
     event.preventDefault();
     articlesListElement.classList.remove("hidden");
     hiddenstuff.classList.add("hidden");
+    title.classList.remove("hidden");
   });
 
   function fetchMarkdownAndConvert(filePath) {
@@ -48,14 +51,9 @@ window.onload = function () {
 </script>
 
 <template>
-  <div
-    id="hidden-content"
-    class="ml-60 mr-60 markdown-content hidden bg-slate-900 px-10 mt-24"
-  >
-    <button
-      id="back-btn"
-      class="mt-20 justify-left hover:text-gray-300 focus:outline-none bg-white text-gray-900 rounded-sm w-32 h-10 font-extrabold mb-5 hover:bg-gray-300 hover:text-gray-900 transition duration-500 ease-in-out"
-    >
+  <div id="hidden-content" class="ml-60 mr-60 markdown-content hidden bg-slate-900 px-10 mt-24">
+    <button id="back-btn"
+      class="mt-20 justify-left hover:text-gray-300 focus:outline-none bg-white text-gray-900 rounded-sm w-32 h-10 font-extrabold mb-5 hover:bg-gray-300 hover:text-gray-900 transition duration-500 ease-in-out">
       &larr; &nbsp;&nbsp; Back
     </button>
     <hr />
@@ -63,10 +61,11 @@ window.onload = function () {
   </div>
 
   <main>
-    <h2 class="mt-32 font-extrabold text-white text-5xl text-center">
-      articles
-    </h2>
+    <h2 id="title" class="mt-32 font-extrabold text-white text-5xl text-center">
+        Articles
+      </h2>
     <div id="articles-list" class="mt-20 grid-cols-4 grid">
+
       <div class="rounded-sm bg-teal-950 p-5 w-72 m-10">
         <h2 class="font-extrabold text-white text-lg">Home</h2>
         <br />
