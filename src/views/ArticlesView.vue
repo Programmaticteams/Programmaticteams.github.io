@@ -53,7 +53,7 @@ window.onload = function () {
 <template>
   <div id="hidden-content" class="ml-60 mr-60 markdown-content hidden bg-slate-900 px-10 mt-24">
     <button id="back-btn"
-      class="mt-20 justify-left hover:text-gray-300 focus:outline-none bg-white text-gray-900 rounded-sm w-32 h-10 font-extrabold mb-5 hover:bg-gray-300 hover:text-gray-900 transition duration-500 ease-in-out">
+      class="mt-20 justify-left focus:outline-none bg-white text-gray-900 rounded-sm w-32 h-10 font-extrabold mb-5 hover:bg-gray-300 hover:text-gray-900 transition duration-500 ease-in-out">
       &larr; &nbsp;&nbsp; Back
     </button>
     <hr />
