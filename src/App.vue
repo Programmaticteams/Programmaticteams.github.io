@@ -105,7 +105,7 @@ import { RouterLink, RouterView } from "vue-router";
             </li>
           </ul>
         </div>
-        <div class="flex gap-12 justify-center">
+        <div class="flex gap-12 justify-center items-center">
           <h1 class="font-bold text-lg mt-1">Socials:</h1>
           <a
             href="https://www.instagram.com/programmatics_official/"
