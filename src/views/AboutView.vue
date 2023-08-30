@@ -9,8 +9,8 @@ import about from "../components/About.vue";
         alt="Programmatic logo"
         class="logo"
         src="src/assets/logo.png"
-        width="400"
-        height="400"
+        width="700"
+        height="700"
       />
     </div>
     <header>
