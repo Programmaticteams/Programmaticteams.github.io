@@ -4,74 +4,6 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
   <nav
-    class="nav w-full text-white shadow-md text-xl font-extrabold ubpixel-antialiased fixed flex top-0 py-4 px-20 bg-gray-900 z-50 items-center"
-  >
-    <input type="checkbox" id="nav-check" />
-    <div class="nav-header flex items-center">
-      <RouterLink to="/" tag="img">
-        <img class="w-10" src="./assets/logo.png" />
-      </RouterLink>
-
-      <RouterLink to="/">Programmatics</RouterLink>
-    </div>
-    <div class="nav-btn items-center h-full flex justify-center">
-      <label for="nav-check" class="p-2">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-    </div>
-
-    <ul class="nav-list items-center">
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <divz
-        class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"
-      ></divz>
-      <li>
-        <a href="/about">About</a>
-      </li>
-      <div
-        class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"
-      ></div>
-      <li>
-        <a href="/team">Our Team</a>
-      </li>
-      <div
-        class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"
-      ></div>
-      <li>
-        <a href="/enroll">Enroll</a>
-      </li>
-      <div
-        class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"
-      ></div>
-      <li>
-        <a href="/volunteer">Volunteer</a>
-      </li>
-      <div
-        class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"
-      ></div>
-      <li>
-        <a href="/articles">Articles</a>
-      </li>
-      <div
-        class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"
-      ></div>
-      <li>
-        <a href="https://discord.gg/PGUc95ZRYk">
-          <img class="w-8" src="./assets/discord.png"
-        /></a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/programmatics_official/">
-          <img class="w-9" src="./assets/instagram.png"
-        /></a>
-      </li>
-    </ul>
-  </nav>
-  <!-- <nav
     class="navbar--main text-white justify-between fixed shadow-md text-xl font-extrabold subpixel-antialiased flex py-4 top-0 w-full px-20 bg-gray-900 z-50"
   >
     <div class="flex items-center">
@@ -130,7 +62,7 @@ import { RouterLink, RouterView } from "vue-router";
         /></a>
       </li>
     </ul>
-  </nav> -->
+  </nav>
 
   <RouterView />
   <footer class="bg-gray-800 text-white py-8 w-full bottom-0 footer">
@@ -204,72 +136,6 @@ import { RouterLink, RouterView } from "vue-router";
   </footer>
 </template>
 <style>
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  font-family: "Segoe UI";
-}
-
-.nav > .nav-header {
-  flex: 0.95;
-  padding-left: 1rem;
-}
-
-.nav > .nav-list {
-  display: flex;
-  gap: 2rem;
-}
-
-.nav > #nav-check {
-  display: none;
-}
-@media (max-width: 1280px) {
-  .nav {
-    padding-left: 0px !important;
-  }
-  .nav > .nav-btn {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding-top: 0.2rem;
-  }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  .nav > .nav-list {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    background-color: #1a237e;
-    height: 0;
-    transition: all 0.3s ease-in;
-    top: 40px;
-    left: 0;
-    overflow: hidden;
-  }
-  .nav > .nav-list > li {
-    width: 100%;
-    margin-top: 1.5rem;
-  }
-  .nav > #nav-check:checked ~ .nav-list {
-    margin-top: 30px;
-    height: calc(100vh - 50px);
-  }
-}
-
 .para {
   font-size: clamp(0.7rem, 1.5vw, 1rem);
 }
