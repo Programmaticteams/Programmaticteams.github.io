@@ -21,7 +21,7 @@ import { RouterLink, RouterView } from "vue-router";
         <span></span>
       </label>
     </div>
-    <ul class="nav-list items-center mt-7">
+    <ul class="nav-list items-center">
       <li>
         <a href="/">Home</a>
       </li>
@@ -225,6 +225,10 @@ body {
   display: none;
 }
 @media (max-width: 1280px) {
+  .nav-list {
+    margin-top: 28px;
+  }
+
   .nav-list > li {
     margin-top: 0.5rem !important;
   }
