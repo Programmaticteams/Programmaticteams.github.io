@@ -3,7 +3,7 @@ import about from "../components/About.vue";
 </script>
 
 <template>
-  <div class="container gap-80 justify-center items-center">
+  <!-- <div class="container gap-80 justify-center items-center">
     <div class="">
       <img alt="Programmatic logo" class="logo" src="src/assets/logo.png" />
     </div>
@@ -12,7 +12,7 @@ import about from "../components/About.vue";
         <about />
       </div>
     </main>
-  </div>
+  </div> -->
 </template>
 
 <style scoped>
