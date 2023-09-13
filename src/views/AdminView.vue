@@ -201,5 +201,11 @@ table tr:nth-child(even) {
     justify-content: center;
     align-items: center;
   }
+
+  table th,
+  table td {
+    padding: 12px 14px;
+    text-align: left;
+  }
 }
 </style>
