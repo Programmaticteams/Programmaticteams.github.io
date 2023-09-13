@@ -172,7 +172,6 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   border: none;
-  border-radius: 5px;
   background-color: #ffffff;
   box-shadow: 0px 0px 90px rgba(161, 93, 93, 0.1);
 }
