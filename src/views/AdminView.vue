@@ -97,7 +97,7 @@ window.onload = function () {
         <button type="submit" id="login-btn" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Login</button>
         <p id="message" class="text-red-800"></p>
     </form> -->
-  <main id="main" class="gap-x-40 top-44 flex m-10 tables">
+  <main id="main" class="gap-40 flex m-10">
     <section class="flex flex-col gap-10 mt-7 mb-10">
       <h1 class="font-extrabold text-gray-200 text-6xl mt-32">Enrolled</h1>
       <!-- NOTE ADD HIDDEN CLASS WHEN USING LOGIN PAGE-->
@@ -164,42 +164,11 @@ window.onload = function () {
   </main>
 </template>
 <style>
-* {
-  box-sizing: border-box;
-}
-
-.row {
-  margin-left: -5px;
-  margin-right: -5px;
-}
-
-.column {
-  float: left;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.row {
-  margin-left: -5px;
-  margin-right: -5px;
-}
-
-.column {
-  float: left;
-  width: 50%;
-  padding: 5px;
-}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+#main {
+  margin-bottom: 20rem;
 }
 
 table {
-  width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   border: none;
@@ -222,26 +191,10 @@ table th {
 table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
-.container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-th,
-tr,
-td {
-  text-align: left;
-  padding: 16px;
-}
-
-a:hover {
-  text-decoration: underline;
-}
 
 /* 1330 media screen */
 @media (max-width: 1330px) {
-  .tables {
+  #main {
     flex-direction: column;
     gap: 6rem;
     text-align: center;
