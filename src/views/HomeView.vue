@@ -160,13 +160,13 @@
 .image-container img {
   border: 10px transparent;
 
-  box-shadow: 0 0 60px rgba(131, 1, 131, 0.7);
+  box-shadow: 0 0 20px rgba(131, 1, 131, 0.7);
 
-  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.75s ease-in-out;
 }
 
 .image-container:hover img {
-  box-shadow: 0 0 80px rgb(100, 0, 128);
+  box-shadow: 0 0 30px rgb(100, 0, 128);
 }
 
 @media (max-width: 1630px) {
