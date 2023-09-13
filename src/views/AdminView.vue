@@ -163,7 +163,7 @@ window.onload = function () {
     </section>
   </main>
 </template>
-<style>
+<style scoped>
 #main {
   margin-bottom: 20rem;
 }
