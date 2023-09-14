@@ -13,7 +13,7 @@ function getImageUrl() {
 <template>
   <div class="flex justify-center gap-24 items-center">
     <div>
-      <img class="w-custom rounded" :src="getImageUrl()" alt="" />
+      <img class="w-custom-scr rounded" :src="getImageUrl()" alt="" />
     </div>
     <div>
       <h2 class="txt-custom text-xl font-bold text-white">
@@ -25,3 +25,10 @@ function getImageUrl() {
     </div>
   </div>
 </template>
+
+<style scoped>
+.w-custom-scr {
+  width: 560px;
+  height: 296px;
+}
+</style>
