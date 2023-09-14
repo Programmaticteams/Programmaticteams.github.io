@@ -20,7 +20,8 @@
 }
 
 .details {
-  color: #fff;
+  /*light grey text color */
+  color: #ced4da;
 }
 
 i {
@@ -34,8 +35,8 @@ i {
 }
 
 h3 {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 600;
   margin-bottom: 0.4rem;
   color: #fff;
 }

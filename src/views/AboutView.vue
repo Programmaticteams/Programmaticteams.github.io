@@ -24,6 +24,8 @@ import about from "../components/About.vue";
 
   .container {
     gap: 14rem;
+    padding: 1rem;
+    padding-bottom: 3rem;
   }
 }
 
