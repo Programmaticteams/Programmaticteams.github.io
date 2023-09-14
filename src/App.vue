@@ -260,7 +260,8 @@ body {
     flex-direction: column;
     gap: 1rem;
     width: 100%;
-    background-color: #1a237e;
+    /* find a darker color */
+    background: rgb(31, 41, 55);
     height: 0;
     transition: all 0.3s ease-in;
     top: 40px;
