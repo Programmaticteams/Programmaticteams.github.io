@@ -11,7 +11,7 @@ function getImageUrl() {
 </script>
 
 <template>
-  <div class="flex justify-center gap-24">
+  <div class="flex justify-center gap-24 items-center">
     <div>
       <img class="w-custom rounded" :src="getImageUrl()" alt="" />
     </div>
