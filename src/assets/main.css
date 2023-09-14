@@ -94,3 +94,17 @@ body {
   width: 880px;
   max-width: 880px;
 }
+
+p,
+div {
+  font-family: "Georgia", serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Georgia", serif !important;
+}
