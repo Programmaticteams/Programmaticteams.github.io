@@ -20,7 +20,7 @@
 }
 
 .details {
-  color: var(--color-background);
+  color: #fff;
 }
 
 i {
@@ -37,7 +37,7 @@ h3 {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 0.4rem;
-  color: var(--color-background);
+  color: #fff;
 }
 
 @media (min-width: 1025px) {
