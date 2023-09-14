@@ -53,11 +53,11 @@ window.onload = function () {
 <template>
   <div
     id="hidden-content"
-    class="ml-60 mr-60 markdown-content hidden bg-slate-900 px-10 mt-24"
+    class="markdown-content hidden bg-slate-900 px-10 mt-24 mb-8 article-custom"
   >
     <button
       id="back-btn"
-      class="mt-20 justify-left focus:outline-none bg-white text-gray-900 rounded-sm w-32 h-10 font-extrabold mb-5 hover:bg-gray-300 hover:text-gray-900 transition duration-500 ease-in-out"
+      class="justify-left focus:outline-none bg-white text-gray-900 rounded-sm w-32 h-10 font-extrabold hover:bg-gray-300 hover:text-gray-900 transition duration-500 ease-in-out mb-6 mt-6"
     >
       &larr; &nbsp;&nbsp; Back
     </button>
@@ -145,10 +145,19 @@ a:hover {
   color: #ffffff;
 }
 
+.article-custom {
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+
 /* media 1250px */
 @media (max-width: 1320px) {
   .grid-custom {
     grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .article-custom {
+    margin-left: 8rem;
+    margin-right: 8rem;
   }
 }
 
@@ -160,6 +169,36 @@ a:hover {
     justify-items: center;
     align-content: space-evenly;
     align-items: center;
+  }
+
+  .article-custom {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}
+
+/* media 800px */
+@media (max-width: 800px) {
+  .article-custom {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .markdown-content h1,
+  .markdown-content h2,
+  .markdown-content h3,
+  .markdown-content h4,
+  .markdown-content h5,
+  .markdown-content h6 {
+    font-size: 1.8rem;
+  }
+}
+
+/* media 600px */
+@media (max-width: 600px) {
+  .article-custom {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 </style>
