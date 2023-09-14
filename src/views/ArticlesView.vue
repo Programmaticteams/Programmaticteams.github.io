@@ -131,6 +131,20 @@ window.onload = function () {
   padding: 1rem, 1rem, 1rem, 1rem;
 }
 
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  line-height: 1.5;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
 /* media 1250px */
 @media (max-width: 1320px) {
   .grid-custom {

@@ -22,27 +22,27 @@ import BioCard from "../components/BioCard.vue";
     <section class="flex flex-col gap-20 mt-36 mb-10">
       <BioCard
         name="Ofir"
-        pos="Founder, Front-End Developer, Teacher"
+        pos="Founder, Front-End Developer"
         desc=" Hi, I'm Ofir and im the founder of Programmatics. I have over 5 years of coding experience in Python and recently started working with Unity and Dart, making many practical applications."
-        langs="Python, Dart, C#"
+        langs="Python, Dart, C#, JavaScript"
         discord="@.ofish"
         imgurl="discord.png"
       />
       <BioCard
         name="Zain"
         desc="Hello, my name is Zain. I am looking forward to teaching you all about programming! Currently, I have 3 years of experience in both Python and Raspberry Pi."
-        langs="Python, Raspberry Pi"
+        langs="Python,"
         discord="@zaindaman"
-        pos="Founder, Treasurer, Teacher, Web Dev"
-        imgurl="zain.jpg"
+        pos="Founder"
+        imgurl="discord.png"
       />
 
       <BioCard
         name="Adam"
         desc="Hello, I'm Adam. I have about 4 years of experience in Unity and making video games."
-        langs="Python"
+        langs="Python, C#"
         discord="@yourmom"
-        pos="Founder, Graphic Designer, Teacher"
+        pos="Founder, Graphic Designer"
         imgurl="discord.png"
       />
 
