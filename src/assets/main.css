@@ -96,7 +96,8 @@ body {
 }
 
 p,
-div {
+div,
+button {
   font-family: "Georgia", serif !important;
 }
 

@@ -93,7 +93,7 @@ window.onload = function () {
 <template>
   <header id="header" class="bg--about flex-col text-center shadow-lg">
     <h2
-      class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 mb-3 font-extrabold text-8xl pb-2"
+      class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 mb-3 font-extrabold text-8xl pb-2 title-volunteer"
     >
       Volunteer Today!
     </h2>
@@ -274,8 +274,11 @@ window.onload = function () {
     </div>
   </aside>
 
-  <main id="main" class="flex gap-x-80 top-44 mb-10">
-    <section class="flex flex-col gap-36">
+  <main
+    id="main"
+    class="flex gap-x-80 top-44 mb-10 justify-center items-center main-volunteer"
+  >
+    <section class="flex flex-col gap-36 zpattern-space">
       <Zpattern1
         name="What Do We Expect In A Volunteer?"
         desc="
@@ -345,6 +348,33 @@ window.onload = function () {
 
   100% {
     transform: translateX(0%);
+  }
+}
+
+/* media 1050 */
+@media (max-width: 1050px) {
+  .zpattern-space {
+    gap: 6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .zpattern-space {
+    gap: 3rem;
+  }
+
+  .title-volunteer {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .title-volunteer {
+    font-size: 4rem;
+  }
+
+  .main-volunteer {
+    padding: 1rem;
   }
 }
 </style>
