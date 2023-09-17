@@ -189,7 +189,7 @@ window.onload = function () {
 
 <template>
   <h2
-    class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 mb-1 font-extrabold text-8xl pb-2 mt-24"
+    class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 mb-1 font-extrabold text-8xl pb-2 mt-24 title text-center"
   >
     Start Learning today!
   </h2>
@@ -200,7 +200,7 @@ window.onload = function () {
   >
     Enroll Now &rarr;
   </button>
-  <div class="gap-5 mb-5 flex bg-blue-800 p-2 rounded-sm">
+  <div class="gap-5 mb-5 flex bg-blue-800 p-2 rounded-sm Autoplay-btn">
     <h4 class="font-extrabold text-white text-2xl">Autoplay:</h4>
     <hr />
     <label class="switch">
@@ -363,7 +363,7 @@ window.onload = function () {
             </div>
             <h2 class="text-black font-extrabold">Scratch</h2>
             <h3 class="text-white font-bold pb-5">Beginner</h3>
-            <p class="px-5 text-center text-white">
+            <p class="px-5 text-center text-white text-size">
               Scratch is a dynamic block code language developed by MIT,
               designed to teach kids how to code. Scratch Scratch is excellent
               at teaching beginners how to think logically, introducing
@@ -377,7 +377,7 @@ window.onload = function () {
             </div>
             <h2 class="text-black font-extrabold">Python Basic</h2>
             <h3 class="text-white font-bold pb-5">Beginner-Intermediate</h3>
-            <p class="px-5 text-center text-white">
+            <p class="px-5 text-center text-white text-size">
               This course jumps right into a text based programming language:
               Python. Python is a general purpose language developed by Guido
               van Rossum, and it is one of the easiest languages to learn.
@@ -391,7 +391,7 @@ window.onload = function () {
             </div>
             <h2 h2 class="text-black font-extrabold">Python Advanced</h2>
             <h3 class="text-white font-bold pb-5">Intermediate</h3>
-            <p class="px-5 text-center text-white">
+            <p class="px-5 text-center text-white text-size">
               This course aims to focus on more advanced applications of Python.
               Rather than simply learning Python as a language, students will
               get to understand that languages are only tools. We'll dive into
@@ -405,7 +405,7 @@ window.onload = function () {
             </div>
             <h2 class="text-black font-extrabold">Unity</h2>
             <h3 class="text-white font-bold pb-5">Intermediate-Advanced</h3>
-            <p class="px-5 text-center text-white">
+            <p class="px-5 text-center text-white text-size">
               In this class, we'll take a look at Unity, an amazing
               cross-platform game engine that is used by many professionals to
               create popular games like Call of Duty, Pokemon Go, Beat Saber,
@@ -419,7 +419,7 @@ window.onload = function () {
             </div>
             <h2 class="text-black font-extrabold">Raspberry Pi</h2>
             <h3 class="text-white font-bold pb-5">Advanced</h3>
-            <p class="px-5 text-center text-white">
+            <p class="px-5 text-center text-white text-size">
               Learn to use hardware alongside software to create exciting
               projects with the Raspberry Pi and the new Raspberry Pi Pico
               microcontroller. In this class you'll learn how software can
@@ -614,15 +614,103 @@ window.onload = function () {
   font-size: 1.31rem;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   .wrapper .carousel {
     grid-auto-columns: calc((100% / 2) - 9px);
   }
+
+  .text-size {
+    width: 400px;
+  }
+
+  .carousel {
+    width: 1000px;
+  }
 }
 
-@media screen and (max-width: 600px) {
+/* media 1150 */
+@media screen and (max-width: 1150px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+
+  .text-size {
+    width: 400px;
+  }
+
+  .carousel {
+    width: 800px;
+  }
+
+  .title {
+    font-size: 5rem;
+  }
+}
+
+/* media 900 */
+@media screen and (max-width: 900px) {
   .wrapper .carousel {
     grid-auto-columns: 100%;
+  }
+
+  .text-size {
+    width: 400px;
+  }
+
+  .carousel {
+    width: 400px;
+  }
+
+  .title {
+    font-size: 4.4rem;
+  }
+}
+
+/* media 800 */
+
+@media screen and (max-width: 800px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+
+  .text-size {
+    width: 400px;
+  }
+
+  .carousel {
+    width: 400px;
+  }
+
+  .title {
+    font-size: 3.3rem;
+  }
+}
+
+/* media 600 */
+
+@media screen and (max-width: 500px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+
+  .text-size {
+    width: 340px;
+  }
+
+  .carousel {
+    width: 340px;
+  }
+
+  .title {
+    font-size: 3.1rem;
+  }
+}
+
+/* media 400 */
+
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 2.8rem;
   }
 }
 
