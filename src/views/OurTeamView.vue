@@ -3,7 +3,7 @@ import BioCard from "../components/BioCard.vue";
 </script>
 
 <template>
-  <main class="flex overflow-hidden">
+  <main class="flex">
     <section class="">
       <h1 class="font-extrabold text-gray-200 text-6xl mt-32">Our Team:</h1>
       <h3 class="text-lg font-bold py-10 ourTeam-desc text-gray-300">
