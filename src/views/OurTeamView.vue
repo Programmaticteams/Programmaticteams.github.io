@@ -3,8 +3,8 @@ import BioCard from "../components/BioCard.vue";
 </script>
 
 <template>
-  <main class="flex gap-x-80 top-44">
-    <section class="fixed">
+  <main class="flex overflow-hidden">
+    <section class="">
       <h1 class="font-extrabold text-gray-200 text-6xl mt-32">Our Team:</h1>
       <h3 class="text-lg font-bold py-10 ourTeam-desc text-gray-300">
         This is the team of founders, developers, and teachers behind
@@ -17,9 +17,7 @@ import BioCard from "../components/BioCard.vue";
         students. Meet the team:
       </h3>
     </section>
-    <hr class="px-20" />
-    <div class="border border-gray-600"></div>
-    <section class="flex flex-col gap-20 mt-36 mb-10">
+    <section class="flex flex-col gap-20 mt-36 mb-10 overflow-scroll">
       <BioCard
         name="Ofir"
         pos="Founder, Front-End Developer"
@@ -57,3 +55,30 @@ import BioCard from "../components/BioCard.vue";
     </section>
   </main>
 </template>
+
+<style scoped>
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+}
+
+nav {
+  flex: 0 0 50vw;
+  background: gray;
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+section {
+  flex: 1 1;
+  padding: 20px;
+}
+</style>
