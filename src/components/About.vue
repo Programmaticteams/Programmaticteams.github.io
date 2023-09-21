@@ -59,4 +59,19 @@ import AboutItem from "./AboutItem.vue";
     encompass a wider variety of programming concepts. In this way, we hope to
     cater to the varied interests and backgrounds of students.
   </AboutItem>
+  <AboutItem>
+    <template #icon>
+      <ToolingIcon />
+    </template>
+    <template #heading>Donations</template>
+
+    Programmatic is a nonprofit organization, and we rely on donations to keep
+    our organization running. If you would like to donate, please click
+    <a
+      class="text-blue-500"
+      href="https://hcb.hackclub.com/donations/start/programmatic"
+      type="link"
+      ><u>here</u>.</a
+    >
+  </AboutItem>
 </template>
