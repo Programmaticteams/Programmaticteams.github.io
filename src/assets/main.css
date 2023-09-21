@@ -30,6 +30,37 @@ body {
   /* width: 650px; */
   height: 366px;
 }
+/* media 1350px */
+@media (max-width: 1350px) {
+  .card {
+    width: 800px;
+    height: 366px;
+  }
+}
+
+/* media 1000px */
+@media (max-width: 1000px) {
+  .card {
+    width: 600px;
+    height: 366px;
+  }
+}
+
+/* media 650px */
+@media (max-width: 650px) {
+  .card {
+    width: 400px;
+    height: 366px;
+  }
+}
+
+/* media 450px */
+@media (max-width: 450px) {
+  .card {
+    width: 370px;
+    height: 366px;
+  }
+}
 
 .img-style,
 .size {

@@ -3,10 +3,14 @@ import BioCard from "../components/BioCard.vue";
 </script>
 
 <template>
-  <main class="flex">
-    <section class="">
-      <h1 class="font-extrabold text-gray-200 text-6xl mt-32">Our Team:</h1>
-      <h3 class="text-lg font-bold py-10 ourTeam-desc text-gray-300">
+  <main class="flex OurTeam">
+    <section class="fixed OurteamTxt">
+      <h2 class="font-extrabold text-gray-200 text-6xl mt-32 ourTeamTitle">
+        Our Team:
+      </h2>
+      <h3
+        class="text-lg font-bold py-10 ourTeam-desc text-gray-300 OurTeamDesc"
+      >
         This is the team of founders, developers, and teachers behind
         Programmatic: Our diverse and dynamic team is the driving force behind
         the continued development and improvment of Programmatic. With a perfect
@@ -17,7 +21,8 @@ import BioCard from "../components/BioCard.vue";
         students. Meet the team:
       </h3>
     </section>
-    <section class="flex flex-col gap-20 mt-36 mb-10 overflow-scroll">
+    <section class="line"></section>
+    <section class="flex flex-col gap-20 mt-36 mb-10 cards">
       <BioCard
         name="Ofir"
         pos="Founder, Front-End Developer"
@@ -80,5 +85,61 @@ nav {
 section {
   flex: 1 1;
   padding: 20px;
+}
+
+/* media 1350 */
+
+@media (max-width: 1350px) {
+  .line {
+    display: none;
+  }
+
+  .OurteamTxt {
+    position: inherit;
+  }
+
+  .OurTeam {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards {
+    margin-top: 1rem;
+  }
+
+  .OurTeamDesc {
+    width: 800px !important;
+    max-width: 800px !important;
+    text-align: center;
+  }
+
+  .ourTeamTitle {
+    text-align: center;
+  }
+
+  /* media 1000px */
+  @media (max-width: 1000px) {
+    .OurTeamDesc {
+      width: 600px !important;
+      max-width: 600px !important;
+    }
+  }
+
+  /* media 650px */
+  @media (max-width: 650px) {
+    .OurTeamDesc {
+      width: 400px !important;
+      max-width: 400px !important;
+    }
+  }
+
+  /* media 450px */
+  @media (max-width: 450px) {
+    .OurTeamDesc {
+      width: 370px !important;
+      max-width: 370px !important;
+    }
+  }
 }
 </style>
