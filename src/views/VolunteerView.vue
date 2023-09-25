@@ -289,7 +289,7 @@ window.onload = function () {
         name="Why Vounteer?"
         desc="
       As a volunteer, you will have the chance to engage with students from diverse backgrounds and play a pivotal role in shaping their journey in coding, Scratch, Python, Raspberry Pi, and Unity. Your dedication and support will enable these students to gain essential skills for the digital age, equipping them to thrive in a world shaped by technological advancements. click the button below and become a part of our passionate community of educators and changemakers."
-        imgurl="unity.jpg"
+        imgurl="Unity.png"
       />
     </section>
   </main>
@@ -302,7 +302,7 @@ window.onload = function () {
 
 <style scoped>
 .bg--about {
-  background-image: url("https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60");
+  background-image: url("https://images.unsplash.com/photo-1505238680356-667803448bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
