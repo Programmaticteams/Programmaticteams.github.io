@@ -297,4 +297,5 @@ body {
     gap: 0.7rem !important;
   }
 }
+/* media 500 */
 </style>

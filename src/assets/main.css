@@ -57,7 +57,7 @@ body {
 /* media 450px */
 @media (max-width: 450px) {
   .card {
-    width: 370px;
+    width: 365px;
     height: 366px;
   }
 }

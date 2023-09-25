@@ -84,7 +84,6 @@ nav {
 
 section {
   flex: 1 1;
-  padding: 20px;
 }
 
 /* media 1350 */
