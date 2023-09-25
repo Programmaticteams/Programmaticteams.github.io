@@ -65,13 +65,12 @@ import AboutItem from "./AboutItem.vue";
     </template>
     <template #heading>Donations</template>
 
-    Programmatic is a nonprofit organization, and we rely on donations to keep
-    our organization running. If you would like to donate, please click
-    <a
+    Support us in making a difference <a
       class="text-blue-500"
       href="https://hcb.hackclub.com/donations/start/programmatic"
       type="link"
-      ><u>here</u>.</a
-    >
+      ><u>here</u></a
+    >. Any amount you give is appreciated as your donation helps us in keeping our programs free and accessible for everyone to use. Every dollar you give goes directly to providing participants with tools and resources to help them succeed. We ensure that your donation has a meaningful impact on our programs and the individuals we serve. Your support is greatly appreciated, and we strive to make the most of every dollar to create positive change in our community. Thank you for your generosity!
+    
   </AboutItem>
 </template>
