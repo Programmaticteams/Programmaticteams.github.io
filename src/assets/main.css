@@ -1000,3 +1000,23 @@ h6 {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 }
+
+.static {
+  position: static;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+}
