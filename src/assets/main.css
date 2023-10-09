@@ -2446,3 +2446,27 @@ z-50 {
 z-auto {
   z-index: auto;
 }
+
+grid {
+  display: grid;
+}
+
+items-start {
+  align-items: start;
+}
+
+items-end {
+  align-items: end;
+}
+
+items-center {
+  align-items: center;
+}
+
+items-baseline {
+  align-items: baseline;
+}
+
+items-stretch {
+  align-items: stretch;
+}
