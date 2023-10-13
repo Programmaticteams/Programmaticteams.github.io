@@ -8,7 +8,7 @@ import { RouterLink, RouterView } from "vue-router";
   >
     <input type="checkbox" id="nav-check" />
     <div class="nav-header flex items-center">
-      <RouterLink to="/" tag="img">
+      <RouterLink to="/" tag="img" class="w-10 h-10">
         <img class="w-10" src="./assets/logo.png" />
       </RouterLink>
 
@@ -58,78 +58,18 @@ import { RouterLink, RouterView } from "vue-router";
       <div
         class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"
       ></div>
-      <li>
+      <li class="items-center justify-center self-center w-8 h-8">
         <a href="https://discord.gg/PGUc95ZRYk">
           <img class="w-8" src="./assets/discord.png"
         /></a>
       </li>
-      <li>
+      <li class="items-center justify-center self-center w-8 h-8">
         <a href="https://www.instagram.com/programmatics_official/">
-          <img class="w-9" src="./assets/instagram.png"
+          <img class="w-8" src="./assets/instagram.png"
         /></a>
       </li>
     </ul>
   </nav>
-  <!-- <nav
-    class="navbar--main text-white justify-between fixed shadow-md text-xl font-extrabold subpixel-antialiased flex py-4 top-0 w-full px-20 bg-gray-900 z-50"
-  >
-    <div class="flex items-center">
-      <RouterLink to="/" tag="img">
-        <img class="w-10" src="./assets/logo.png" />
-      </RouterLink>
-
-      <RouterLink to="/">Programmatics</RouterLink>
-    </div>
-
-    <ul class="flex gap-7 items-center">
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <div
-        class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"
-      ></div>
-      <li>
-        <a href="/about">About</a>
-      </li>
-      <div
-        class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"
-      ></div>
-      <li>
-        <a href="/team">Our Team</a>
-      </li>
-      <div
-        class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"
-      ></div>
-      <li>
-        <a href="/enroll">Enroll</a>
-      </li>
-      <div
-        class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"
-      ></div>
-      <li>
-        <a href="/volunteer">Volunteer</a>
-      </li>
-      <div
-        class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"
-      ></div>
-      <li>
-        <a href="/articles">Articles</a>
-      </li>
-      <div
-        class="inline-block w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50"
-      ></div>
-      <li>
-        <a href="https://discord.gg/PGUc95ZRYk">
-          <img class="w-8" src="./assets/discord.png"
-        /></a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/programmatics_official/">
-          <img class="w-9" src="./assets/instagram.png"
-        /></a>
-      </li>
-    </ul>
-  </nav> -->
 
   <RouterView />
   <footer class="bg-gray-800 text-white py-8 w-full bottom-0 footer">
@@ -146,7 +86,9 @@ import { RouterLink, RouterView } from "vue-router";
           </div>
         </div>
         <div class="flex gap-7 items-center justify-center">
-          <ul class="flex gap-7 items-center justify-center link-list">
+          <ul
+            class="flex gap-7 items-center justify-center link-list list-none"
+          >
             <li>
               <a href="/">Home</a>
             </li>

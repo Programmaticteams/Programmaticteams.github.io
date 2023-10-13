@@ -15,9 +15,7 @@ import AboutItem from "./AboutItem.vue";
     future. We offer many comprehensive courses in the hope that those who are
     interested in computer science will find opportunity to pursue their
     interests here. Meet
-    <a class="text-blue-500" href="/enroll" type="link"
-      ><br /><u> our team</u>.</a
-    >
+    <a class="text-blue-500" href="/enroll" type="link"><u> our team</u>.</a>
   </AboutItem>
 
   <AboutItem>
@@ -45,7 +43,7 @@ import AboutItem from "./AboutItem.vue";
     problem-solving skills will discover our offerings to be a valuable time
     investment. The comprehensive courses we offer include, Unity, Raspberry Pi,
     Python, and more! Find out more
-    <a class="text-blue-500" href="/enroll" type="link"><br /><u>here</u>.</a>
+    <a class="text-blue-500" href="/enroll" type="link"><u>here</u>.</a>
   </AboutItem>
   <AboutItem>
     <template #icon>

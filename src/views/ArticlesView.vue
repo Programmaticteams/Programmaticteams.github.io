@@ -109,6 +109,19 @@ window.onload = function () {
   font-size: 2rem;
 }
 
+#read-button {
+  color: #868e96;
+  font-size: 1.2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  line-height: 1.5;
+  transition: 0.3s;
+}
+
+#read-button:hover {
+  color: #ffffff;
+}
+
 .markdown-content li {
   font-size: 1.2rem;
   line-height: 1.5;

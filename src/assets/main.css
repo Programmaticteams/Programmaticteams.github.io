@@ -167,14 +167,14 @@ h6 {
   line-height: 1rem;
 }
 
-.text-xm {
+.text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
-.text-large {
-  font-size: 0.1.125rem;
-  line-height: 1.5rem;
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-xl {
@@ -287,39 +287,39 @@ h6 {
   color: rgb(249 250 251);
 }
 
-.text-grey-100 {
+.text-gray-100 {
   color: rgb(243 244 246);
 }
 
-.text-grey-200 {
+.text-gray-200 {
   color: rgb(229 231 235);
 }
 
-.text-grey-300 {
+.text-gray-300 {
   color: rgb(209 213 219);
 }
 
-.text-grey-400 {
+.text-gray-400 {
   color: rgb(156 163 175);
 }
 
-.text-grey-500 {
+.text-gray-500 {
   color: rgb(107 114 128);
 }
 
-.text-grey-600 {
+.text-gray-600 {
   color: rgb(75 85 99);
 }
 
-.text-grey-700 {
+.text-gray-700 {
   color: rgb(55 65 81);
 }
 
-.text-grey-800 {
+.text-gray-800 {
   color: rgb(31 41 55);
 }
 
-.text-grey-900 {
+.text-gray-900 {
   color: rgb(17 24 39);
 }
 
@@ -5709,4 +5709,98 @@ h6 {
 .active\:bg-gray-600:active {
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.bg-gray-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
+.bg-neutral-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.w-0\.5 {
+  width: 0.125rem /* 2px */;
+}
+
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.bg-gray-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 7 18 / var(--tw-bg-opacity));
+}
+
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
+.bg-blue-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.bg-teal-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(4 47 46 / var(--tw-bg-opacity));
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.bg-slate-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+input[type="text"],
+input[type="password"],
+input[type="checkbox"],
+textarea {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc; /* You can adjust the color and thickness of the outline */
 }

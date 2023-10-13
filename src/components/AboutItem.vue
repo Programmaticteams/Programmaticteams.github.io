@@ -1,9 +1,9 @@
 <template>
-  <div class="item">
+  <div class="item justify-center items-center">
     <i>
       <slot name="icon"></slot>
     </i>
-    <div class="details">
+    <div class="details justify-center items-center text-center">
       <h3>
         <slot name="heading"></slot>
       </h3>
@@ -24,12 +24,12 @@
   color: #ced4da;
 }
 
+/* media 1800 */
+
 i {
   display: flex;
   place-items: center;
   place-content: center;
-  width: 32px;
-  height: 32px;
 
   color: #181818;
 }

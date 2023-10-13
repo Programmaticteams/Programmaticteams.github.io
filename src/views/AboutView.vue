@@ -4,8 +4,12 @@ import about from "../components/About.vue";
 
 <template>
   <div class="container gap-80 justify-center items-center mt-20">
-    <div class="">
-      <img alt="Programmatic logo" class="logo" src="src/assets/logo.png" />
+    <div class="justify-center items-center logo">
+      <img
+        alt="Programmatic logo"
+        class="logo self-center"
+        src="src/assets/logo.png"
+      />
     </div>
     <main class="content flex justify-center items-center flex-col">
       <about />
@@ -61,6 +65,7 @@ header {
 .content {
   justify-content: center;
   align-items: center;
+  max-width: 900px;
 }
 
 @media (max-width: 1025px) {
