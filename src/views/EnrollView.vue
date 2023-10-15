@@ -86,6 +86,8 @@ window.onload = function () {
     );
     formbar.removeEventListener("click", closeformbar);
   }
+
+  
   const wrapper = document.querySelector(".wrapper");
   const carousel = document.querySelector(".carousel");
   const firstCardWidth = carousel.querySelector(".cardEn").offsetWidth;

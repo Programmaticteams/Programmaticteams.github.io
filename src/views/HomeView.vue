@@ -56,7 +56,7 @@
     <section class="flex flex-col justify-center gap-36">
       <div class="flex justify-center gap-24">
         <div class="image-container">
-          <img class="w-custom rounded" src="src/assets/circuit.avif" alt="" />
+          <img class="w-custom rounded" src="../assets/circuit.avif" alt="" />
         </div>
         <div>
           <h2 class="txt-custom text-5xl font-extrabold py-5 text-white mt-1">
@@ -103,7 +103,7 @@
           >
         </div>
         <div class="image-container">
-          <img class="w-custom rounded" src="src/assets/car.png" alt="" />
+          <img class="w-custom rounded" src="../assets/car.png" alt="" />
         </div>
       </div>
     </section>
