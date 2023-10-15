@@ -22,7 +22,7 @@ function getImageUrl() {
         alt="a picture of a Programmatic member"
       />
       <section class="flex flex-col gap-4 justify-center pr-3">
-        <h2 class="text-white font-bold">{{ name }}</h2>
+        <h2 class="text-white font-bold text-sm">{{ name }}</h2>
         <p class="text-white">{{ pos }}</p>
         <p class="text-white">{{ desc }}</p>
         <p class="text-white">{{ langs }}</p>
