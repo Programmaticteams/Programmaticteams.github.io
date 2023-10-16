@@ -95,7 +95,7 @@ window.onload = function () {
   </main>
 </template>
 
-<style>
+<style scoped>
 .markdown-content h1,
 .markdown-content h2,
 .markdown-content h3,
