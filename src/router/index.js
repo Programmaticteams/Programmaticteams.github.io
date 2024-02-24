@@ -51,6 +51,11 @@ const router = createRouter({
       path: "/:pathMatch(.*)*",
       redirect: "/",
     },
+
+    {
+      path: "/:catchAll(.*)",
+      redirect: "/",
+    },
   ],
 });
 
