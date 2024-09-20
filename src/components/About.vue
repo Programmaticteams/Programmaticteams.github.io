@@ -8,8 +8,11 @@ import AboutItem from "./AboutItem.vue";
       <DocumentationIcon />
     </template>
     <template #heading>Who Are We?</template>
-
-   courses in the hope that those who are
+    We are a nonprofit organization committed to providing extensive free online
+    education in computer science via Google Meet. We hope to expand to
+    in-person/physical classes at libraries and schools at somepoint in the
+    future. We offer many comprehensive courses in the hope that those who are
+    courses in the hope that those who are
     interested in computer science will find opportunity to pursue their
     interests here. Meet
     <a class="text-blue-500" href="/enroll" type="link"><u> our team</u>.</a>
