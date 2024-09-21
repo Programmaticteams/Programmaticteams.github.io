@@ -35,7 +35,7 @@
             Programmatic is an organization dedicated to teaching prospective
             students how to program. Computer science is a subject that is
             growing more and more important by the day, and we want to make sure
-            that kids are able to explore and learn in this field, to develop
+            that kids are able to explore and learn in this field. We want them to develop
             important skills like algorithmic thinking.
           </p>
           <a
